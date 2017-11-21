@@ -16,12 +16,12 @@
                     <div class="slt-item {{ ($column->parentId && $column->parentId->id == $col->id) ? 'active' : '' }}">{{ $col->title }}
                         <div class="slt-list">
                             @foreach($col->childColumns as $cld)
-                            <a class="slt-item {{ $column->id == $cld->id ? 'active' : '' }}" href="{{ $cld->path ? $cld->path : $cld->id }}">{{ $cld->title }}</a>
+                            <a class="slt-item {{ $column->id == $cld->id ? 'active' : '' }}" href="{{ $cld->path ? $cld->path : $cld->id }}"><i class="icon"></i> {{ $cld->title }}</a>
                             @endforeach
                         </div>
                     </div>
                     @else
-                        <a class="slt-item {{ $col->id == $column->id ? 'active' : '' }}" href="{{ $col->path ? $col->path : $col->id }}">{{ $col->title }}</a>
+                        <a class="slt-item {{ $col->id == $column->id ? 'active' : '' }}" href="{{ $col->path ? $col->path : $col->id }}"><i class="icon"></i> {{ $col->title }}</a>
                     @endif
                 @endforeach
             </div>

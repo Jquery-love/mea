@@ -17,6 +17,7 @@ class FilesController extends Controller
     	return view('admin.file.index',compact('page','files'));
     }
     public function show($file){
+        dd($file);
         $contents = Storage::disk('public')->get($file);
         $ext = substr(strrchr($file, '.'), 1);
         if($ext == 'png' || $ext == 'jpg' || $ext == 'gif'){

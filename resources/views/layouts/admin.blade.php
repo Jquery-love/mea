@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@yield('title','后台管理')</title>
         <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+        <link rel="stylesheet" href="{{ asset('layer/css/layui.css') }}">
         <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
     </head>
     <body>

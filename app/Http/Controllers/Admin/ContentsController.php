@@ -56,7 +56,7 @@ class ContentsController extends Controller
         $contents->recommend = $request->recommend ? 1 : 0;
         $contents->intro = $request->intro ? $request->intro : '';
         $contents->template = $request->template;
-
+        $contents->created_at = $request->created_at;
         $contents->desc = $request->desc ? $request->desc : '';
         $bool = $contents->save();
 
@@ -101,6 +101,7 @@ class ContentsController extends Controller
             'recommend' => $request->recommend ? 1 : 0,
             'intro'=> $request->intro ? $request->intro : '',
             'template' => $request->template,
+            'created_at' => $request->created_at,
             'desc'=> $request->desc ? $request->desc : ''
         ]);
         session()->flash('success','更新成功');

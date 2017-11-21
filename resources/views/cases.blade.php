@@ -12,30 +12,31 @@
             <div class="slt-hd">案列选择</div>
             <div class="slt-list">
                 @foreach($parent->childColumns as $col)
-                    @if($col->childColumns->count() > 0)
-                    <div class="slt-item {{ ($column->parentId && $column->parentId->id == $col->id) ? 'active' : '' }}">{{ $col->title }}
+                    <div class="slt-item {{ $col->id == $column->id ? 'active' : '' }} {{ ($column->parentId && $column->parentId->id == $col->id) ? 'active' : '' }}">
+                        <a class="slt-text " href="{{ $col->path ? $col->path : $col->id }}"><i class="icon"></i> {{ $col->title }}</a>
+                        @if($col->childColumns->count() > 0)
                         <div class="slt-list">
                             @foreach($col->childColumns as $cld)
                             <a class="slt-item {{ $column->id == $cld->id ? 'active' : '' }}" href="{{ $cld->path ? $cld->path : $cld->id }}"><i class="icon"></i> {{ $cld->title }}</a>
                             @endforeach
                         </div>
+                        @endif
                     </div>
-                    @else
-                        <a class="slt-item {{ $col->id == $column->id ? 'active' : '' }}" href="{{ $col->path ? $col->path : $col->id }}"><i class="icon"></i> {{ $col->title }}</a>
-                    @endif
                 @endforeach
             </div>
         </div>
         <div class="r case-list">
             @foreach($contents as $con)
-            <div class="case-item">
+            <a class="case-item" href="/{{ $column->path ? $column->path : $column->id }}/{{ $con->path ? $con->path : $con->id }}">
                 <div class="item-hd"><img src="{{ $con->pic }}" alt=""></div>
                 <div class="item-bd">{{ $con->title }}</div>
-            </div>
+                <div class="item-desc">{!! $con->desc !!}</div>
+            </a>
             @endforeach
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
 
 </script>

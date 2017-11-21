@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="form-groups">
-                <div class="form-group col-sm-4">
+                <div class="form-group col-sm-3">
                     <label for="columnId">父栏目</label>
                     @if($colId)
                         <input type="text" class="form-control" readonly value="{{ $column->title }}">
@@ -65,13 +65,17 @@
                     </select>
                     @endif
                 </div>
-                <div class="form-group col-sm-4">
+                <div class="form-group col-sm-3">
                     <label for="sort">排序</label>
                     <input type="text" class="form-control" name="sort" id="sort">
                 </div>
-                <div class="form-group col-sm-4">
+                <div class="form-group col-sm-3">
                     <label for="recommend">推荐</label>
                     <input type="checkbox" class="form-control" name="recommend" id="recommend" placeholder="排序">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="columnId">日期</label>
+                    <input size="16" type="text" name="created_at" value="" readonly class="layui-input form-control">
                 </div>
             </div>
             <div class="form-groups">
@@ -94,4 +98,26 @@
             </div>
         </form>
     </div>
+    <script type="text/javascript" src="/layer/layui.js"></script>
+    <script type="text/javascript">
+        layui.use('laydate', function(){
+            layui.laydate.render({
+                elem: '.layui-input'
+                //,format: 'yyyy年MM月dd日'
+                //,value: new Date(1989,9,14)
+                ,format: 'yyyy-MM-dd HH:mm:ss'
+                ,value: new Date()
+                //,max: 0
+                //,min: '2016-10-14'
+                //,max: -1
+                //,value: '1989年10月14日'
+                ,ready: function(date){
+                  console.log(date);
+                }
+                ,done: function(value, date, endDate){
+                  console.log(value, date, endDate);
+                }
+            });
+        });
+    </script>
 @stop

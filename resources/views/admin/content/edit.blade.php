@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="form-groups">
-                <div class="form-group col-sm-4">
+                <div class="form-group col-sm-3">
                     <label for="columnId">父栏目</label>
                     <select name="columnId" id="columnId" class="form-control">
                         <option value="0">请选择</option>
@@ -61,13 +61,17 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group col-sm-4">
+                <div class="form-group col-sm-3">
                     <label for="sort">排序</label>
                     <input type="text" class="form-control" name="sort" id="sort" value="{{ $content->sort }}">
                 </div>
-                <div class="form-group col-sm-4">
+                <div class="form-group col-sm-3">
                     <label for="recommend">推荐</label>
                     <input type="checkbox" {{ $content->recommend ? 'checked' : '' }} class="form-control" name="recommend" id="recommend" placeholder="排序">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="columnId">日期</label>
+                    <input size="16" type="text" name="created_at" value="" readonly class="layui-input form-control">
                 </div>
             </div>
             <div class="form-groups">
@@ -90,4 +94,26 @@
             </div>
         </form>
     </div>
+    <script type="text/javascript" src="/layer/layui.js"></script>
+    <script type="text/javascript">
+        layui.use('laydate', function(){
+            layui.laydate.render({
+                elem: '.layui-input'
+                //,format: 'yyyy年MM月dd日'
+                //,value: new Date(1989,9,14)
+                ,format: 'yyyy-MM-dd HH:mm:ss'
+                ,value: '{{ $content->created_at }}'
+                //,max: 0
+                //,min: '2016-10-14'
+                //,max: -1
+                //,value: '1989年10月14日'
+                ,ready: function(date){
+                  console.log(date);
+                }
+                ,done: function(value, date, endDate){
+                  console.log(value, date, endDate);
+                }
+            });
+        });
+    </script>
 @stop

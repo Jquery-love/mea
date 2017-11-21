@@ -16,7 +16,7 @@ Route::get('/', 'Web\HomeController@index')->name('home');
 Route::get('/{column}', 'Web\ColumnsController@index')->where('column','^(?!admin|storage|api|\/)[\.\-\w]+$');
 
 Route::get('/{column}/{content}', 'Web\ContentsController@index')->where([
-    'column'=>'^(?!admin|storage|api|\/)[\.\w]+$',
+    'column'=>'^(?!admin|storage|api|\/)[\.\-\w]+$',
     'content'=>'^(?!\/)[\.\w]+$'
 ]);
 

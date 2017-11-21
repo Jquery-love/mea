@@ -53,7 +53,7 @@
         <footer class="page-ft">
             <div class="ft-nav">
                 @foreach($colft as $cft)
-                <a href="/{{ $cft->path ? $cft->path : $cft->id }}.html" class="nav-item ib">{{ $cft->title }}</a>
+                <a href="/{{ $cft->path ? $cft->path : $cft->id }}" class="nav-item ib">{{ $cft->title }}</a>
                 @endforeach
             </div>
             <div class="ft-extra">

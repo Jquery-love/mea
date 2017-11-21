@@ -1165,11 +1165,26 @@ a:hover {
   white-space: nowrap;
   color: #333;
   cursor: pointer;
+  font-size: 14px;
+}
+
+.page-bd .page-main .slt-wrap .slt-list .slt-item .icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  background-color: #f60000;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 .page-bd .page-main .slt-wrap .slt-list .slt-item.active,
 .page-bd .page-main .slt-wrap .slt-list .slt-item:hover {
   color: #e30613;
+}
+
+.page-bd .page-main .slt-wrap .slt-list .slt-item.active .icon {
+  background-image: url(/images/select.png?4a73497e37428671190c5e6059a923b7);
 }
 
 .page-bd .page-main .slt-wrap .slt-list .slt-item.active .slt-item {

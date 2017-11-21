@@ -91,9 +91,11 @@
 		.slt-wrap{width:35%;
 			.slt-hd{font-size:2rem;font-weight:bold;padding-bottom:3%;}
 			.slt-list{position:relative;display:inline-block;
-				.slt-item{display:block;line-height:25px;margin:1% 0;white-space:nowrap;color:$base-color;cursor: pointer;
+				.slt-item{display:block;line-height:25px;margin:1% 0;white-space:nowrap;color:$base-color;cursor: pointer;font-size:14px;
+                    .icon{display:inline-block;width:20px;height:20px;background-size:100%;background-color:#f60000;vertical-align:middle;margin-right:5px;}
 					&.active,&:hover{color:$red;}
 					&.active{
+                        .icon{background-image:url('../img/select.png');}
 						.slt-item{display:block;}
 					}
 					& > .slt-list{position:absolute;top:0;left:120%;display:none;

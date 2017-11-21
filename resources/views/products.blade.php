@@ -12,7 +12,7 @@
             <div class="slt-hd">型号选择</div>
             <div class="slt-list">
                 @foreach($contents as $con)
-                <a class="slt-item" href="#{{ $con->id }}">{{ $con->title }}</a>
+                <a class="slt-item" href="#{{ $con->id }}"><i class="icon"></i>  {{ $con->title }}</a>
                 @endforeach
             </div>
         </div>
@@ -28,12 +28,12 @@
     var $sltList = $('.slt-list'),$sltItem = $sltList.find('.slt-item'),$contents = $('.content');
     var id = location.hash.substr(1) || ($sltItem.first().attr('href') && $sltItem.first().attr('href').substr(1));
     $contents.hide().filter("div[id="+ id +"]").show();
-    $sltItem.filter("a[href='#"+ id +"']").addClass('now');
+    $sltItem.filter("a[href='#"+ id +"']").addClass('active');
 
     $sltItem.on('click',function(){
         var $this = $(this),id = $this.attr('href').substr(1);
-        $sltItem.removeClass('now');
-        $this.addClass('now');
+        $sltItem.removeClass('active');
+        $this.addClass('active');
         $contents.hide().filter("div[id="+ id +"]").show();
     })
 

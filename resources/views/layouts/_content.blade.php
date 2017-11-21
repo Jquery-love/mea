@@ -18,7 +18,6 @@
         }
     });
 </script>
-
 <!-- 加载编辑器的容器 -->
 <input type="hidden" name="{{ isset($name) ? $name : 'contents' }}"  value="">
 <script id="container" type="text/plain" style="width:880px;height:300px;">

@@ -5,7 +5,7 @@
     <div class="wp page-main">
         <div class="news-list">
 			@foreach($contents as $con)
-				<a class="news-item">
+				<a class="news-item" href="/{{ $column->path ? $column->path : $column->id }}/{{ $con->path ? $con->path : $con->id }}">
 					@if($con->pic)
 						<div class="news-img"><img src="{{ $con->pic }}" alt="{{ $con->title }}"></div>
 					@endif

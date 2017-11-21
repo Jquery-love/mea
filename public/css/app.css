@@ -1161,7 +1161,7 @@ a:hover {
 .page-bd .page-main .slt-wrap .slt-list .slt-item {
   display: block;
   line-height: 25px;
-  margin: 1% 0;
+  margin: 3% 0;
   white-space: nowrap;
   color: #333;
   cursor: pointer;
@@ -1170,8 +1170,8 @@ a:hover {
 
 .page-bd .page-main .slt-wrap .slt-list .slt-item .icon {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-size: 80%;
   background-color: #f60000;
   vertical-align: middle;

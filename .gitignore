@@ -6,6 +6,7 @@
 /.idea
 /.vagrant
 /config/database.php
+/public/ueditor/
 Homestead.json
 Homestead.yaml
 npm-debug.log

@@ -1226,10 +1226,6 @@ a:hover {
   background-color: #edf5fa !important;
 }
 
-.page-bd .page-main .content p {
-  clear: both;
-}
-
 .page-bd .page-main .content table.noBorderTable td,
 .page-bd .page-main .content table.noBorderTable th,
 .page-bd .page-main .content table.noBorderTable caption {

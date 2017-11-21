@@ -92,10 +92,10 @@
 			.slt-hd{font-size:2rem;font-weight:bold;padding-bottom:3%;}
 			.slt-list{position:relative;display:inline-block;
 				.slt-item{display:block;line-height:25px;margin:1% 0;white-space:nowrap;color:$base-color;cursor: pointer;font-size:14px;
-                    .icon{display:inline-block;width:20px;height:20px;background-size:100%;background-color:#f60000;vertical-align:middle;margin-right:5px;}
+                    .icon{display:inline-block;width:20px;height:20px;background-size:80%;background-color:#f60000;vertical-align:middle;margin-right:5px;}
 					&.active,&:hover{color:$red;}
 					&.active{
-                        .icon{background-image:url('../img/select.png');}
+                        .icon{background-image:url('../img/select.png');background-repeat:no-repeat;background-position:center;}
 						.slt-item{display:block;}
 					}
 					& > .slt-list{position:absolute;top:0;left:120%;display:none;
@@ -105,12 +105,31 @@
 
 			}
 		}
+        .content{
+            a{color:#e30613;}
+			b,strong{font-weight: bold;}
+			blockquote{padding-left:10px;border-left:3px solid #ddd;}
+			img{vertical-align:middle;}
+			.selectTdClass{background-color:#edf5fa !important}
+			p{clear:both;}
+			table.noBorderTable td,table.noBorderTable th,table.noBorderTable caption{border:1px dashed #ddd !important}
+			table{margin-bottom:10px;border-collapse:collapse;display:table;font-size:12px;line-height:1.5;max-width:880px;
+				caption{border:1px dashed $border-color;border-bottom:0;padding:3px;text-align:center;}
+				&.noBorderTable{
+					th,td,caption{border:1px dashed $border-color !important}
+				}
+				td,th{padding: 5px 10px;border: 1px solid $border-color;}
+				th{border-top:1px solid #BBB;background-color:#F7F7F7;}
+				tr.firstRow th{border-top-width:2px;}
+				td p{margin:0;padding:0;}
+			}
+			sup{vertical-align: super;}
+			sub{vertical-align: sub;}
+        }
 		.content.r{min-width:60%;max-width:65%;}
 		.case-list{font-size:0;width:70%;display:flex;justify-content: space-between;
 			.case-item{width:32%;display:inline-block;vertical-align: top;
-				.item-hd{width:100%;
-
-                }
+				.item-hd{width:100%;}
 				.item-bd{font-size:1.4rem;text-align: center;padding-top:2%;}
 			}
 		}

@@ -1172,7 +1172,7 @@ a:hover {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-size: 100%;
+  background-size: 80%;
   background-color: #f60000;
   vertical-align: middle;
   margin-right: 5px;
@@ -1185,6 +1185,8 @@ a:hover {
 
 .page-bd .page-main .slt-wrap .slt-list .slt-item.active .icon {
   background-image: url(/images/select.png?4a73497e37428671190c5e6059a923b7);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .page-bd .page-main .slt-wrap .slt-list .slt-item.active .slt-item {
@@ -1200,6 +1202,88 @@ a:hover {
 
 .page-bd .page-main .slt-wrap .slt-list .slt-item > .slt-list .slt-item:first-child {
   margin-top: 0;
+}
+
+.page-bd .page-main .content a {
+  color: #e30613;
+}
+
+.page-bd .page-main .content b,
+.page-bd .page-main .content strong {
+  font-weight: bold;
+}
+
+.page-bd .page-main .content blockquote {
+  padding-left: 10px;
+  border-left: 3px solid #ddd;
+}
+
+.page-bd .page-main .content img {
+  vertical-align: middle;
+}
+
+.page-bd .page-main .content .selectTdClass {
+  background-color: #edf5fa !important;
+}
+
+.page-bd .page-main .content p {
+  clear: both;
+}
+
+.page-bd .page-main .content table.noBorderTable td,
+.page-bd .page-main .content table.noBorderTable th,
+.page-bd .page-main .content table.noBorderTable caption {
+  border: 1px dashed #ddd !important;
+}
+
+.page-bd .page-main .content table {
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  display: table;
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 880px;
+}
+
+.page-bd .page-main .content table caption {
+  border: 1px dashed #ddd;
+  border-bottom: 0;
+  padding: 3px;
+  text-align: center;
+}
+
+.page-bd .page-main .content table.noBorderTable th,
+.page-bd .page-main .content table.noBorderTable td,
+.page-bd .page-main .content table.noBorderTable caption {
+  border: 1px dashed #ddd !important;
+}
+
+.page-bd .page-main .content table td,
+.page-bd .page-main .content table th {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+}
+
+.page-bd .page-main .content table th {
+  border-top: 1px solid #BBB;
+  background-color: #F7F7F7;
+}
+
+.page-bd .page-main .content table tr.firstRow th {
+  border-top-width: 2px;
+}
+
+.page-bd .page-main .content table td p {
+  margin: 0;
+  padding: 0;
+}
+
+.page-bd .page-main .content sup {
+  vertical-align: super;
+}
+
+.page-bd .page-main .content sub {
+  vertical-align: sub;
 }
 
 .page-bd .page-main .content.r {

@@ -1,6 +1,8 @@
 @extends('layouts.default')
 @section('banner')
-<div class="banner"><img src="/img/branner.jpg" alt=""></div>
+<div class="banner">
+    <img src="/img/banner.jpg" alt="">
+</div>
 @stop
 @section('content')
 <div class="wp page-main">

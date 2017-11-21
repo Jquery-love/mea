@@ -1072,11 +1072,12 @@ a:hover {
   z-index: 9;
   margin-top: -15px;
   max-height: 530px;
+  overflow: hidden;
 }
 
 .banner img {
   max-height: 530px;
-  width: 100%;
+  text-align: center;
 }
 
 .page-bd .case-intro {

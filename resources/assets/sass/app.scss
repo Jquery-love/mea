@@ -58,8 +58,8 @@
 		}
 	}
 }
-.banner{position:relative;z-index:9;margin-top:-15px;max-height:530px;
-	img{max-height:530px;width:100%;}
+.banner{position:relative;z-index:9;margin-top:-15px;max-height:530px;overflow:hidden;
+	img{max-height:530px;text-align:center;}
 }
 
 .page-bd{

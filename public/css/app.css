@@ -1598,7 +1598,7 @@ a:hover {
   }
 
   .page-header .my-menu .menu-item:first-child {
-    margin-left: 0;
+    display: none;
   }
 
   .page-header .my-menu .menu-item .menu-child {
@@ -1699,6 +1699,23 @@ a:hover {
 
   .banner {
     margin-top: 3%;
+  }
+
+  .page-ft .ft-extra {
+    padding-top: 3%;
+  }
+
+  .page-ft .ft-extra p.contact {
+    font-size: 0;
+  }
+
+  .page-ft .ft-extra p.contact span {
+    font-size: 1.2rem;
+  }
+
+  .page-ft .ft-extra p span {
+    display: block;
+    margin-top: 0;
   }
 }
 

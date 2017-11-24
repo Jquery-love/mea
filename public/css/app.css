@@ -903,6 +903,7 @@ a:hover {
   background: url(/fonts/mea-logo.svg?55a52b55fd41b53db453132534f88b2b) no-repeat center top;
   background-size: 100% auto;
   text-indent: -100px;
+  max-width: 135px;
 }
 
 .page-header .my-top .logo strong {

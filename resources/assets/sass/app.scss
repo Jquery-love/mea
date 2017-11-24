@@ -11,7 +11,7 @@
 // Bootstrap
 .page-header{position:relative;z-index:10;
 	.my-top{
-		.logo{padding-top:60px;font-size:0;background:url('../img/mea-logo.svg') no-repeat center top;background-size:100% auto;text-indent:-100px;
+		.logo{padding-top:60px;font-size:0;background:url('../img/mea-logo.svg') no-repeat center top;background-size:100% auto;text-indent:-100px;max-width:135px;
 			strong{text-indent:0;display:block;font-size:1.8rem;margin-top:10px;font-family:"Gagamond";font-weight:bold;text-transform:uppercase;white-space:nowrap;}
 		}
 	}

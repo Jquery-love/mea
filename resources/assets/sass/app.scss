@@ -223,6 +223,10 @@
             .z-aside-l{width:auto;float:none;left:auto;margin-left:0;}
         }
         .page-main{padding-bottom:10%;
+            &.home{
+                .welcome-wrap{padding-right:0;padding-top:10%;}
+                .wc-brand{position: static;max-width:100%;margin-top:6%;}
+            }
             .news-list{
                 .news-item{display:block;
                     .news-img{display:block;width:100%;}

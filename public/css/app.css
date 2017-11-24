@@ -1622,6 +1622,17 @@ a:hover {
     padding-bottom: 10%;
   }
 
+  .page-bd .page-main.home .welcome-wrap {
+    padding-right: 0;
+    padding-top: 10%;
+  }
+
+  .page-bd .page-main.home .wc-brand {
+    position: static;
+    max-width: 100%;
+    margin-top: 6%;
+  }
+
   .page-bd .page-main .news-list .news-item {
     display: block;
   }

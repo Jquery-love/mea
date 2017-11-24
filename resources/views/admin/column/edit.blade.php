@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
 	<div class="col-lg-12">
-		<h1>修改栏目</h1>
+		<h1 >修改栏目</h1>
 		<ol class="breadcrumb">
 			<li><a href="{{ route('admin') }}">首页</a></li>
 			<li class="active">栏目管理</li>

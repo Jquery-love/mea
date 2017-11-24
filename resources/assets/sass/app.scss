@@ -42,9 +42,10 @@
 	}
 	.my-menu{background-color:$orange;padding-left:140px;position:relative;margin-top:30px;font-size:0;
 		.menu-item{line-height:50px;font-size:1.4rem;padding:0 1.2rem;font-weight:bold;display:inline-block;
-			&:hover{color:$red;
-				.menu-child{display:flex;}
-			}
+			&:hover{color:$red;}
+            &.show{
+                .menu-child{display:flex;}
+            }
 			&.float{position:absolute;bottom:50px;background-color:$orange;line-height:30px;font-size:1.3rem;font-weight:normal;}
 			.menu-child{position:absolute;top:50px;left:0;background-color:#fff;width:100%;padding:3%;justify-content:space-between;display:none;
 				.menu-list,.menu-brand{display:inline-block;vertical-align:top;}

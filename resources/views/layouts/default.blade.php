@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@yield('title','米亚')</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('layer/css/layui.css') }}">
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('layer/layui.js') }}"></script>
     </head>
     <body>
         <header class="page-header">
@@ -48,6 +50,15 @@
                 @endforeach
             </nav>
         </header>
+        <script type="text/javascript">
+            $(".menu-item").on("click",".item-link",function(e){
+                var $this = $(this);
+                if($this.attr("href") == 'javascript:;'){
+                    $this.closest(".my-menu").find(".menu-item").removeClass("show")
+                    $this.closest(".menu-item").addClass("show")
+                }
+            })
+        </script>
         @yield('banner')
         <div class="page-bd">@yield('content')</div>
         <footer class="page-ft">

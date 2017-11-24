@@ -1014,7 +1014,7 @@ a:hover {
   color: #e30613;
 }
 
-.page-header .my-menu .menu-item:hover .menu-child {
+.page-header .my-menu .menu-item.show .menu-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

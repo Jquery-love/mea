@@ -25,7 +25,6 @@ class ColumnsController extends Controller
         $columns = Column::select(['id','title'])->orderBy('sort','desc')->get();
         $dirFiles = $file->files(base_path().'/resources/views');
         $tpls = array();
-
         foreach ($dirFiles as $fl){
             $match = array();
             preg_match('/([\w\-]+)\./',$fl,$match);

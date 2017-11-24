@@ -41,6 +41,7 @@ class FilesController extends Controller
                     $file->operator = $request->user()->id;
                     $file->column_id = $request->columnId ? $request->columnId : NAN;
                     $file->sort = $request->sort ? $request->sort : 0;
+                    $file->application = $request->application ? $request->application : 0;
                     $file->title = $request->title ? $request->title : $originalName;
                     $file->url = Storage::url($filename);
                     $sbool = $file->save(); //保存

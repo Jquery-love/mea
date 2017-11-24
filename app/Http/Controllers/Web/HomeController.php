@@ -12,11 +12,11 @@ class HomeController extends Controller
 {
     //
     public function index(Column $column,Content $content,Files $files){
-        $colhd = $column->where('parent_id',0)->orderBy('sort','asc')->find([1, 2, 3,4,5,6]);
+        $colhd = $column->where('parent_id',0)->orderBy('sort','asc')->find([1, 2, 3,4,5,6,10]);
         $colft = $column->where('parent_id',0)->orderBy('sort','asc')->find([6,7,8,9]);
-        
-        $about = $column->find(1);
+        $banners = $files->where([['application','=',2],['column_id','=',0]])->orderBy('sort','asc')->get();
+        $company = $column->find(10);
         $exhibitionContent = $content->where('column_id',7)->where('recommend',1)->orderBy('updated_at','desc')->first();
-        return view('home',compact('colhd','colft','about','exhibitionContent'));
+        return view('home',compact('colhd','colft','company','banners','exhibitionContent'));
     }
 }

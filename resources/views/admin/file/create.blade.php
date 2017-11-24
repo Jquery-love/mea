@@ -54,13 +54,13 @@
                 <label for="application">文件用途</label>
                 <div class="btn-group db" data-toggle="buttons">
                     <label class="btn btn-primary">
-                        <input type="radio" name="application" id="option1" value="0" autocomplete="off">banner
+                        <input type="radio" name="application" id="option1" value="2" autocomplete="off">banner
                     </label>
                     <label class="btn btn-primary">
                         <input type="radio" name="application" id="option2" value="1" autocomplete="off">下载文件
                     </label>
                     <label class="btn btn-primary active">
-                        <input type="radio" name="application" id="option3" checked value="2" autocomplete="off">其他
+                        <input type="radio" name="application" id="option3" checked value="0" autocomplete="off">其他
                     </label>
                 </div>
             </div>

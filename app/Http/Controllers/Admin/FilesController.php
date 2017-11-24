@@ -62,6 +62,7 @@ class FilesController extends Controller
         $file->sort = $request->sort ? $request->sort : 0;
         $file->title = $request->title;
         $file->url = $request->file;
+        $file->application = $request->application ? $request->application : 0;
         $bool = $file->save(); //保存
 
         if($bool){
@@ -72,5 +73,28 @@ class FilesController extends Controller
             ]);
         }
 
+    }
+    public function edit(Column $column,Files $file){
+        $page = 'files';
+        $columns = $column->select(['id','title'])->orderBy('sort','desc')->get();
+        //var_dump($columns);
+        return view('admin.file.edit',compact('file','columns','page'));
+    }
+    public function update(Request $request,Files $file){
+        $this->validate($request,[
+            'title' => 'required|max:300',
+            'columnId' => 'required',
+            'url' => 'required'
+        ]);
+        $file->update([
+            'operator' => $request->user()->id,
+            'column_id' => $request->columnId ? $request->columnId : NAN,
+            'sort'  => $request->sort ? $request->sort : 0,
+            'title'  => $request->title ? $request->title : '',
+            'url'   => $request->url ? $request->url : '',
+            'application' => $request->application ? $request->application : 0,
+        ]);
+        session()->flash('success','更新成功');
+        return redirect()->route('files.index');
     }
 }

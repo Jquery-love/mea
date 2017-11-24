@@ -35,6 +35,7 @@
                     <td><a href="{{ $file->url }}">浏览</a></td>
                     <td>
                         <input class="btn btn-default btn-delete" data-target=".deleteModal" data-whatever="{{ $file->title }}" data-url="{{ route('files.destroy',$file->id) }}" data-toggle="modal" type="button" value="删除">
+                        <a class="btn btn-default" href="{{ route('files.edit',$file->id) }}" value="">修改</a>
                     </td>
                 </tr>
                 @endforeach

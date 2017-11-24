@@ -20,9 +20,9 @@ class ColumnsController extends Controller
         }
         $key = preg_match('/^\d+$/',$query) ? 'id' : 'path';
         $column = $cols->where($key,$query)->with('parentId')->first();
+        //顶级栏目
         $parent = $column->parentTopId($column->id);
-
-        if($column->id == 4){
+        if(sizeOf($column->allContents) == 0 && $parent->id == 4){
             $contents = $column->childContents;
         }else{
             $contents = $column->allContents;

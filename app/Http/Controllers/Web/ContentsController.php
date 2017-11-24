@@ -23,12 +23,11 @@ class ContentsController extends Controller
             $conId = substr($conId,0,stripos($conId,'.'));
         }
         $conKey = preg_match('/^\d+$/',$conId) ? 'id' : 'path';
-
         $column = $cols->where($colKey,$colId)->with('parentId')->first();
         $content = $cons->where($conKey,$conId)->first();
+        $parent = $column->parentTopId($column->id);
 
-
-        return view($content->template,compact('colhd','colft','column','content'));
+        return view($content->template,compact('colhd','colft','column','content','parent'));
 
     }
 }

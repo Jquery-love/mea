@@ -6,9 +6,9 @@
 @import "mixin";
 @import "reset";
 *{box-sizing:border-box;}
-.wp{width:90%;margin:0 5%;}
+.wp{width:1100px;margin:0 auto;}
 // Bootstrap
-.page-header{width:90%;margin:0 5%;position:relative;z-index:10;
+.page-header{position:relative;z-index:10;
 	.my-top{
 		.logo{width:120px;padding-top:60px;font-size:0;background:url('../img/mea-logo.svg') no-repeat center top;background-size:100% auto;text-indent:-100px;overflow:hidden;
 			strong{text-indent:0;display:block;font-size:1.8rem;margin-top:10px;font-family:"Gagamond";font-weight:bold;text-transform:uppercase;white-space:nowrap;}
@@ -40,14 +40,17 @@
 			}
 		}
 	}
-	.my-menu{background-color:$orange;padding-left:140px;position:relative;margin-top:30px;font-size:0;
+	.my-menu{background-color:$orange;position:relative;margin-top:30px;font-size:0;
+        &.fixed{position:fixed;left:0;right:0;top:0;margin-top:0;}
+        .menu-wrap{position:relative;}
 		.menu-item{line-height:50px;font-size:1.4rem;padding:0 1.2rem;font-weight:bold;display:inline-block;
+            &:first-child{margin-left:-1.2rem;}
 			&:hover{color:$red;}
             &.show{
                 .menu-child{display:flex;}
             }
 			&.float{position:absolute;bottom:50px;background-color:$orange;line-height:30px;font-size:1.3rem;font-weight:normal;}
-			.menu-child{position:absolute;top:50px;left:0;background-color:#fff;width:100%;padding:3%;justify-content:space-between;display:none;border:1px solid #ddd;border-top-color:transparent;
+			.menu-child{position:absolute;top:50px;left:0;background-color:#fff;width:100%;padding:3%;justify-content:space-between;display:none;border-top-color:transparent;box-shadow:1px 1px 8px 0 rgba(0,0,0,0.2);
 				.menu-list,.menu-brand{display:inline-block;vertical-align:top;}
 				.menu-list{min-width:30%;border-right:1px solid $base-color;padding-right:3%;
 					.item-link{display:block;border-bottom:1px dashed $gray;}
@@ -59,7 +62,7 @@
 		}
 	}
 }
-.banner{position:relative;z-index:9;margin-top:-15px;overflow:hidden;
+.banner{position:relative;z-index:9;overflow:hidden;
 	img{text-align:center;}
 }
 .case-intro{margin-top:6%;margin-bottom:6%;
@@ -73,7 +76,7 @@
 }
 .page-bd{margin-top:6%;margin-bottom:6%;
     &.cup{@include cup(lm,400px,40px);}
-    .page-aside{
+    .page-aside{margin-bottom:6%;
         .aside-hd{font-size:3.5rem;margin-bottom:6%;}
         .slt-wrap{width:100%;
 			.slt-hd{font-size:2rem;font-weight:bold;padding-bottom:3%;}
@@ -162,8 +165,8 @@
 }
 
 .page-ft{
-	.ft-nav{background-color:$gray-light;padding:5%;text-align: center;
-		.nav-item{margin-left:35px;border-bottom:2px solid transparent;
+	.ft-nav{background-color:$gray-light;padding:5% 0;text-align: center;
+		.nav-item{margin-left:8%;border-bottom:2px solid transparent;
 			&:first-child{margin-left:0;}
 			&:hover{color:$base-color;border-bottom:2px solid $red;}
 		}
@@ -180,6 +183,9 @@
 
 @media screen and (max-width:640px){
     html{font-size:8px;}
+    .wp{width:auto;}
+    .breadcrumb{margin-left:3%;}
+    .case-intro{margin-left:3%;margin-right:3%;margin-bottom:0;}
     .page-header{margin:0;width:100%;
         .my-top{margin:0 3%;position:relative;padding-bottom:50px;
             .top-tool{position:static;
@@ -192,6 +198,7 @@
         }
         .my-menu{padding-left:0;
             .menu-item{
+                &:first-child{margin-left:0;}
                 .menu-child{border-left:0;border-right:0;
                     .menu-list{border-right:0;padding-right:0;width:100%;}
                     .menu-brand{display:none;}
@@ -200,7 +207,24 @@
             .menu-item.float{position:static;font-size:1.4rem;font-weight:bold;}
         }
     }
-    .page-bd{
+    .page-bd{margin:0 3%;
+        .page-aside{margin-top:10%;}
+        &.cup{padding-left:0;
+            .z-aside-l{width:auto;float:none;left:auto;margin-left:0;}
+        }
+        .page-main{padding-bottom:10%;
+            .news-list{
+                .news-item{display:block;
+                    .news-img{display:block;width:100%;}
+                    .news-info{display:block;padding-left:0;padding-top:2%;}
+                    .news-time{margin-top:1%;}
+                }
+
+            }
+            .case-list{width:100%;
+                .case-item{width:100%;margin-top:5%;margin-left:0;}
+            }
+        }
         .page-attention{padding:5% 3%;
             h3{font-size:3rem;}
             p{margin-top:2%;}

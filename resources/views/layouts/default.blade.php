@@ -12,7 +12,7 @@
     </head>
     <body>
         <header class="page-header">
-            <div class="my-top cf">
+            <div class="my-top cf wp">
                 <a href="/" class="logo l">MEA <strong>Building success</strong></a>
                 <div class="r top-tool">
                     <div class="search ib">
@@ -27,27 +27,29 @@
                 </div>
             </div>
             <nav class="my-menu">
-                @foreach($colhd as $ctp)
-                <div class="menu-item {{ $ctp->id==2 ? 'float' : '' }}">
-                    @if($ctp->id == 1 || $ctp->id == 3)
-                        <a href="javascript:;" class="item-link">{{ $ctp->title }}</a>
-                    @else
-                        <a href="/{{ $ctp->path ? $ctp->path : $ctp->id }}" class="item-link">{{ $ctp->title }}</a>
-                    @endif
-                    @if(count($ctp->childColumns) > 0 && ($ctp->id == 1 || $ctp->id == 3))
-                    <div class="menu-child">
-                        <div class="menu-list">
-                            @foreach($ctp->childColumns as $cld)
-                                <a href="/{{ $cld->path ? $cld->path : $cld->id }}" class="item-link {{ $cld->id==2 ? 'float' : '' }}">{{ $cld->title }}</a>
-                            @endforeach
+                <div class="menu-wrap wp">
+                    @foreach($colhd as $ctp)
+                    <div class="menu-item">
+                        @if($ctp->id == 1 || $ctp->id == 3)
+                            <a href="javascript:;" class="item-link">{{ $ctp->title }}</a>
+                        @else
+                            <a href="/{{ $ctp->path ? $ctp->path : $ctp->id }}" class="item-link">{{ $ctp->title }}</a>
+                        @endif
+                        @if(count($ctp->childColumns) > 0 && ($ctp->id == 1 || $ctp->id == 3))
+                        <div class="menu-child">
+                            <div class="menu-list">
+                                @foreach($ctp->childColumns as $cld)
+                                    <a href="/{{ $cld->path ? $cld->path : $cld->id }}" class="item-link">{{ $cld->title }}</a>
+                                @endforeach
+                            </div>
+                            <div class="menu-brand">
+                                <img src="{{ $ctp->pic }}" alt="">
+                            </div>
                         </div>
-                        <div class="menu-brand">
-                            <img src="{{ $ctp->pic }}" alt="">
-                        </div>
+                        @endif
                     </div>
-                    @endif
+                    @endforeach
                 </div>
-                @endforeach
             </nav>
         </header>
         <script type="text/javascript">
@@ -65,6 +67,29 @@
                 }
                 console.log(e);
             })
+            var $menu = $(".my-menu"),
+                $header = $(".page-header"),
+                menuOffset = $menu.offset();
+            miya.fn.scroll(function(){
+                var winData = miya.ui.getW();
+                if(winData.innerWidth < 640 && $(document.body).height() - winData.innerHeight < 300){
+                    return;
+                }
+                if(winData.scrollY > menuOffset.top){
+                    $menu.addClass("fixed");
+                    $header.css("padding-bottom",$menu.outerHeight() + 30);
+                }else{
+                    $menu.removeClass("fixed");
+                    $header.css("padding-bottom",0);
+                }
+            },10);
+            $(function(){
+                miya.fn.responseWinSize();
+                miya.fn.scrollResize(function(){
+                    var winData = miya.ui.getW();
+                    miya.fn.responseWinSize();
+                },10,'resize');
+            });
         </script>
         @yield('banner')
         @yield('intro')

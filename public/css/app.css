@@ -1510,10 +1510,6 @@ a:hover {
 }
 
 @media screen and (max-width: 640px) {
-  html {
-    font-size: 8px;
-  }
-
   .wp {
     width: auto;
   }
@@ -1571,6 +1567,11 @@ a:hover {
 
   .page-header .my-menu {
     padding-left: 0;
+    padding: 10px 0;
+  }
+
+  .page-header .my-menu .menu-item {
+    line-height: 40px;
   }
 
   .page-header .my-menu .menu-item:first-child {

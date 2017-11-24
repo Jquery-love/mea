@@ -20,6 +20,7 @@
 </div>
 <div class="page-aside z-aside-l">
     <div class="aside-hd">{{ $column->title }} </div>
+    @if(sizeOf($parent->childColumns) > 0)
     <div class="slt-wrap">
         <div class="slt-hd">案列选择</div>
         <div class="slt-list">
@@ -37,5 +38,6 @@
             @endforeach
         </div>
     </div>
+    @endif
 </div>
 @stop

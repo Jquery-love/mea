@@ -898,7 +898,6 @@ a:hover {
 }
 
 .page-header .my-top .logo {
-  width: 120px;
   padding-top: 60px;
   font-size: 0;
   background: url(/fonts/mea-logo.svg?55a52b55fd41b53db453132534f88b2b) no-repeat center top;
@@ -1148,7 +1147,7 @@ a:hover {
   *zoom: 1;
   overflow: hidden;
   position: relative;
-  padding-left: 440px;
+  padding-left: 390px;
   /* 左侧栏固定宽度，右侧自适应 */
 }
 
@@ -1170,10 +1169,10 @@ a:hover {
 
 .page-bd.cup .z-aside-l {
   float: left;
-  width: 400px;
+  width: 350px;
   margin-left: -100%;
   position: relative;
-  left: -440px;
+  left: -390px;
   _left: 0;
 }
 

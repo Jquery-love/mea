@@ -27,6 +27,8 @@ class ContentsController extends Controller
         $content = $cons->where($conKey,$conId)->first();
         $parent = $column->parentTopId($column->id);
 
+        
+
         return view($content->template,compact('colhd','colft','column','content','parent'));
 
     }

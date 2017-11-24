@@ -11,7 +11,7 @@
 // Bootstrap
 .page-header{position:relative;z-index:10;
 	.my-top{
-		.logo{width:120px;padding-top:60px;font-size:0;background:url('../img/mea-logo.svg') no-repeat center top;background-size:100% auto;text-indent:-100px;
+		.logo{padding-top:60px;font-size:0;background:url('../img/mea-logo.svg') no-repeat center top;background-size:100% auto;text-indent:-100px;
 			strong{text-indent:0;display:block;font-size:1.8rem;margin-top:10px;font-family:"Gagamond";font-weight:bold;text-transform:uppercase;white-space:nowrap;}
 		}
 	}
@@ -76,7 +76,7 @@
     li{display:inline-block;vertical-align:top;}
 }
 .page-bd{margin-top:6%;margin-bottom:6%;
-    &.cup{@include cup(lm,400px,40px);}
+    &.cup{@include cup(lm,350px,40px);}
     .page-aside{margin-bottom:6%;
         .aside-hd{font-size:3.5rem;margin-bottom:6%;}
         .slt-wrap{width:100%;

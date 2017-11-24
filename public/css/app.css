@@ -1473,7 +1473,7 @@ a:hover {
 }
 
 .page-bd .page-attention {
-  padding: 5% 10%;
+  padding: 5% 3%;
   background-color: #f2f2f2;
   margin-bottom: 6%;
   font-family: "Gagamond";
@@ -1483,10 +1483,15 @@ a:hover {
 .page-bd .page-attention h3 {
   font-size: 4.8rem;
   font-weight: bold;
+  margin-bottom: 1%;
 }
 
 .page-bd .page-attention p {
   font-size: 1.6rem;
+}
+
+.page-bd .page-attention:hover {
+  color: #999;
 }
 
 .page-ft .ft-nav {

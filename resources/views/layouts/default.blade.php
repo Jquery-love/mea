@@ -67,7 +67,8 @@
             })
         </script>
         @yield('banner')
-        <div class="page-bd">@yield('content')</div>
+        @yield('intro')
+        <div class="page-bd wp">@yield('content')</div>
         <footer class="page-ft">
             <div class="ft-nav">
                 @foreach($colft as $cft)

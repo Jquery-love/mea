@@ -6,24 +6,24 @@
     @endif
 @stop
 @section('content')
-<div class="page-bd">
-    <div class="wp page-main cf">
-        <div class="l slt-wrap">
-            <div class="slt-hd">型号选择</div>
-            <div class="slt-list">
-                @foreach($contents as $con)
-                <a class="slt-item" href="#{{ $con->id }}"><i class="icon"></i>  {{ $con->title }}</a>
-                @endforeach
-            </div>
+<div class="page-main z-main">
+    @foreach($contents as $con)
+    <div class="content" id="{{ $con->id }}" style="display:none;">
+        {!! $con->desc !!}
+    </div>
+    @endforeach
+</div>
+<div class="page-aside z-aside-l">
+    <div class="aside-hd">{{ $column->title }} </div>
+    <div class="slt-wrap">
+        <div class="slt-hd">型号选择</div>
+        <div class="slt-list">
+            @foreach($contents as $con)
+            <a class="slt-item" href="#{{ $con->id }}"><i class="icon"></i>  {{ $con->title }}</a>
+            @endforeach
         </div>
-        @foreach($contents as $con)
-        <div class="r content" id="{{ $con->id }}" style="display:none;">
-            {!! $con->desc !!}
-        </div>
-        @endforeach
     </div>
 </div>
-
 <script type="text/javascript">
     var $sltList = $('.slt-list'),$sltItem = $sltList.find('.slt-item'),$contents = $('.content');
     var id = location.hash.substr(1) || ($sltItem.first().attr('href') && $sltItem.first().attr('href').substr(1));
@@ -36,7 +36,6 @@
         $this.addClass('active');
         $contents.hide().filter("div[id="+ id +"]").show();
     })
-
 </script>
 
 @stop

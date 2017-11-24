@@ -22,7 +22,11 @@ class ColumnsController extends Controller
         $column = $cols->where($key,$query)->with('parentId')->first();
         $parent = $column->parentTopId($column->id);
 
-        $contents = $column->allContents;
+        if($parent->id == $column->id){
+            $contents = $column->childContents;
+        }else{
+            $contents = $column->allContents;
+        }
         return view($column->template,compact('colhd','colft','column','contents','parent'));
     }
 

@@ -6,12 +6,12 @@
     @endif
 @stop
 @section('content')
-<div class="page-bd">
-    <div class="wp page-main">
-        <div class="page-title">{{ $column->title }}</div>
-        <div class="page-content">
-            {!! $column->contents !!}
-        </div>
+<div class="page-main z-main">
+    <div class="page-content">
+        {!! $column->contents !!}
     </div>
+</div>
+<div class="page-aside z-aside-l">
+    <div class="aside-hd">{{ $column->title }} </div>
 </div>
 @stop

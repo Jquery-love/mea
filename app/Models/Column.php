@@ -16,6 +16,9 @@ class Column extends Model
     public function childColumns(){
         return $this->hasMany('App\Models\Column','parent_id','id');
     }
+    public function childContents(){
+        return $this->hasManyThrough('App\Models\Content','App\Models\Column','parent_id','column_id');
+    }
     public function allContents(){
         return $this->hasMany('App\Models\Content','column_id','id');
     }

@@ -110,7 +110,7 @@
             <div class="ft-extra">
                 <p><a href="http://www.meachina.com">www.meachina.com</a><a href="http://www.mea-group.com">www.mea-group.com</a></p>
                 <p>
-                    米亚建筑材料 | 电话：86 512 5517 0567 | 传真：86 512 5511 3967 | 苏ICP备13019688号
+                    <span>米亚建筑材料 | 电话：86 512 5517 0567 </span>&nbsp;&nbsp;&nbsp; <span>传真：86 512 5511 3967 | 苏ICP备13019688号</span>
                 </p>
             </div>
         </footer>

@@ -1477,6 +1477,7 @@ a:hover {
   background-color: #f2f2f2;
   margin-bottom: 6%;
   font-family: "Gagamond";
+  display: block;
 }
 
 .page-bd .page-attention h3 {
@@ -1497,6 +1498,7 @@ a:hover {
 .page-ft .ft-nav .nav-item {
   margin-left: 8%;
   border-bottom: 2px solid transparent;
+  font-size: 1.4rem;
 }
 
 .page-ft .ft-nav .nav-item:first-child {

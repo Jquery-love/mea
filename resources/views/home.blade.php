@@ -26,9 +26,9 @@
 <div class="page-main home">
     <div class="welcome-wrap">
         <div class="wc-hd">欢迎来到米亚集团</div>
+        <div class="wc-brand"><img src="{{ $company->pic }}" alt=""></div>
         <div class="wc-bd"><pre>{{ $company->intro }}</pre></div>
         <div class="wc-ft"><a href="{{ $colhd[0]->childColumns[0]->path }}" class="link-about">关于公司</a></div>
-        <div class="wc-brand"><img src="{{ $company->pic }}" alt=""></div>
     </div>
 </div>
 <div class="page-attention">

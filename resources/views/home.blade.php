@@ -23,7 +23,7 @@
 </script>
 @stop
 @section('content')
-<div class="wp page-main">
+<div class="page-main home">
     <div class="welcome-wrap">
         <div class="wc-hd">欢迎来到米亚集团</div>
         <div class="wc-bd"><pre>{{ $company->intro }}</pre></div>

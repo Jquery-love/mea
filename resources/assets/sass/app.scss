@@ -71,7 +71,8 @@
 .breadcrumb{margin-top:3%;
     li{display:inline-block;vertical-align:top;}
 }
-.page-bd{margin-top:6%;margin-bottom:6%;@include cup(lm,400px,40px);
+.page-bd{margin-top:6%;margin-bottom:6%;
+    &.cup{@include cup(lm,400px,40px);}
     .page-aside{
         .aside-hd{font-size:3.5rem;margin-bottom:6%;}
         .slt-wrap{width:100%;
@@ -94,6 +95,7 @@
     }
 
 	.page-main{
+        &.home{margin-bottom:6%;}
 		.welcome-wrap{position:relative;padding-right:50%;
 			.wc-hd{font-size:1.8rem;font-weight:bold;}
 			.wc-bd{font-size:1.4rem;padding:5% 0;}

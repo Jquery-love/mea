@@ -68,7 +68,11 @@
         </script>
         @yield('banner')
         @yield('intro')
+        @if(isset($company) && $company->id > 0)
         <div class="page-bd wp">@yield('content')</div>
+        @else
+        <div class="page-bd wp cup">@yield('content')</div>
+        @endif
         <footer class="page-ft">
             <div class="ft-nav">
                 @foreach($colft as $cft)

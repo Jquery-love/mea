@@ -1107,6 +1107,9 @@ a:hover {
 .page-bd {
   margin-top: 6%;
   margin-bottom: 6%;
+}
+
+.page-bd.cup {
   zoom: 1;
   *zoom: 1;
   overflow: hidden;
@@ -1115,23 +1118,23 @@ a:hover {
   /* 左侧栏固定宽度，右侧自适应 */
 }
 
-.page-bd:before,
-.page-bd:after {
+.page-bd.cup:before,
+.page-bd.cup:after {
   display: table;
   content: "";
   line-height: 0;
 }
 
-.page-bd:after {
+.page-bd.cup:after {
   clear: both;
 }
 
-.page-bd .z-main {
+.page-bd.cup .z-main {
   float: left;
   width: 100%;
 }
 
-.page-bd .z-aside-l {
+.page-bd.cup .z-aside-l {
   float: left;
   width: 400px;
   margin-left: -100%;
@@ -1205,6 +1208,10 @@ a:hover {
 
 .page-bd .page-aside .slt-wrap .slt-list .slt-item > .slt-list .slt-item:first-child {
   margin-top: 0;
+}
+
+.page-bd .page-main.home {
+  margin-bottom: 6%;
 }
 
 .page-bd .page-main .welcome-wrap {

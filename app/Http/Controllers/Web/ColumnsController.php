@@ -22,7 +22,7 @@ class ColumnsController extends Controller
         $column = $cols->where($key,$query)->with('parentId')->first();
         $parent = $column->parentTopId($column->id);
 
-        if($parent->id == $column->id){
+        if($column->id == 4){
             $contents = $column->childContents;
         }else{
             $contents = $column->allContents;

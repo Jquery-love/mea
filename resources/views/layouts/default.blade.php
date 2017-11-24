@@ -52,11 +52,18 @@
         </header>
         <script type="text/javascript">
             $(".menu-item").on("click",".item-link",function(e){
+                e.stopPropagation();
                 var $this = $(this);
                 if($this.attr("href") == 'javascript:;'){
                     $this.closest(".my-menu").find(".menu-item").removeClass("show")
                     $this.closest(".menu-item").addClass("show")
                 }
+            })
+            $("html,body").on("click",function(e){
+                if(!$(e.target).closest(".menu-child").length){
+                    $(".my-menu").find(".menu-item").removeClass("show");
+                }
+                console.log(e);
             })
         </script>
         @yield('banner')

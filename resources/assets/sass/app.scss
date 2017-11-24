@@ -16,7 +16,7 @@
 	}
 	.top-tool{margin-top:1%;padding-right:100px;position: relative;
 		.search{position:relative;margin-right:10px;vertical-align: top;
-			input[type="submit"]{position:absolute;top:4px;right:4px;bottom:0;width:20px;height:20px;background:transparent url('../img/search.svg') no-repeat center center;font-size:0;border:0;}
+			input[type="submit"]{position:absolute;top:4px;right:4px;bottom:0;width:20px;height:20px;background:transparent url('../img/search.svg') no-repeat center center;font-size:0;border:0;text-align:center;}
 			&:hover{background-color:$gray-light;
 				input[type="text"]{width:147px;}
 			}
@@ -47,7 +47,7 @@
                 .menu-child{display:flex;}
             }
 			&.float{position:absolute;bottom:50px;background-color:$orange;line-height:30px;font-size:1.3rem;font-weight:normal;}
-			.menu-child{position:absolute;top:50px;left:0;background-color:#fff;width:100%;padding:3%;justify-content:space-between;display:none;
+			.menu-child{position:absolute;top:50px;left:0;background-color:#fff;width:100%;padding:3%;justify-content:space-between;display:none;border:1px solid #ddd;border-top-color:transparent;
 				.menu-list,.menu-brand{display:inline-block;vertical-align:top;}
 				.menu-list{min-width:30%;border-right:1px solid $base-color;padding-right:3%;
 					.item-link{display:block;border-bottom:1px dashed $gray;}
@@ -174,4 +174,35 @@
 			&:first-child{margin-left:0;}
 		}
 	}
+}
+
+@media screen and (max-width:640px){
+    html{font-size:8px;}
+    .page-header{margin:0;width:100%;
+        .my-top{margin:0 3%;position:relative;padding-bottom:50px;
+            .top-tool{position:static;
+                .search{position:absolute;bottom:0;left:0;right:0;height:40px;margin-right:0;border:1px solid #ddd;padding-right:50px;padding-left:6px;
+                    input[type="text"]{line-height:24px;width:100%;padding-right:0;padding-left:0;}
+                    input[type="submit"]{width:38px;height:38px;top:0;right:0;}
+                }
+            }
+
+        }
+        .my-menu{padding-left:0;
+            .menu-item{
+                .menu-child{border-left:0;border-right:0;
+                    .menu-list{border-right:0;padding-right:0;width:100%;}
+                    .menu-brand{display:none;}
+                }
+            }
+            .menu-item.float{position:static;font-size:1.4rem;font-weight:bold;}
+        }
+    }
+    .page-bd{
+        .page-attention{padding:5% 3%;
+            h3{font-size:3rem;}
+            p{margin-top:2%;}
+        }
+    }
+    .banner{margin-top:3%;}
 }

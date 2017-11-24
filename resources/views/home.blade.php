@@ -14,7 +14,7 @@
         carousel.render({
             elem: '.banner'
             ,width: '100%' //设置容器宽度
-            ,height: '530px'
+            
             ,indicator : 'none'
             ,arrow: 'always' //始终显示箭头
             //,anim: 'updown' //切换动画方式

@@ -86,7 +86,7 @@
 			@include('layouts._content')
 		</div>
         <div class="col-sm-12">
-            <button type="submit" class="btn btn-default">提交</button>
+            <button type="button" onClick="formSubmit()" class="btn btn-default">提交</button>
         </div>
 	</form>
 </div>

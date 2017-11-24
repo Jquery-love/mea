@@ -15,10 +15,10 @@
             <div class="my-top cf wp">
                 <a href="/" class="logo l">MEA <strong>Building success</strong></a>
                 <div class="r top-tool">
-                    <div class="search ib">
-                        <input type="text" placeholder="search" name="" value="">
+                    <form class="search ib" action="/search" method="get">
+                        <input type="text" placeholder="search" name="s" value="">
                         <input type="submit" value="搜索"/>
-                    </div>
+                    </form>
                     <div class="web-sw-list ib">
                         <a class="ch active" href="#">简体中文</a>
                         <a class="en" href="#">英语</a>
@@ -93,7 +93,7 @@
         </script>
         @yield('banner')
         @yield('intro')
-        @if(isset($company) && $company->id > 0)
+        @if(isset($company) && $company->id > 0 || isset($key))
         <div class="page-bd wp">@yield('content')</div>
         @else
         <div class="page-bd wp cup">@yield('content')</div>

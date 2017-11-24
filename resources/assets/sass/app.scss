@@ -96,9 +96,19 @@
 			}
 		}
     }
-
+    .page-search{padding-top:5%;
+        .search-hd{margin-bottom:30px;font-size:1.4rem;
+            span{color:#e30613;}
+        }
+        .search-bd{
+            .search-item{display:block;padding:10px 0;
+                .search-link{display:inline-block;}
+            }
+        }
+    }
 	.page-main{
         &.home{margin-bottom:6%;}
+
 		.welcome-wrap{position:relative;padding-right:50%;
 			.wc-hd{font-size:1.8rem;font-weight:bold;}
 			.wc-bd{font-size:1.4rem;padding:5% 0;}

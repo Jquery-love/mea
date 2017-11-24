@@ -1227,6 +1227,28 @@ a:hover {
   margin-top: 0;
 }
 
+.page-bd .page-search {
+  padding-top: 5%;
+}
+
+.page-bd .page-search .search-hd {
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+}
+
+.page-bd .page-search .search-hd span {
+  color: #e30613;
+}
+
+.page-bd .page-search .search-bd .search-item {
+  display: block;
+  padding: 10px 0;
+}
+
+.page-bd .page-search .search-bd .search-item .search-link {
+  display: inline-block;
+}
+
 .page-bd .page-main.home {
   margin-bottom: 6%;
 }

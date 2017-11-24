@@ -13,7 +13,11 @@
 //web
 Route::get('/', 'Web\HomeController@index')->name('home');
 
-Route::get('/{column}', 'Web\ColumnsController@index')->where('column','^(?!admin|storage|api|\/)[\.\-\w]+$');
+
+
+Route::get('/search', 'Web\SearchController@index')->name('search');
+
+Route::get('/{column}', 'Web\ColumnsController@index')->where('column','^(?!admin|storage|search|api|\/)[\.\-\w]+$');
 
 Route::get('/{column}/{content}', 'Web\ContentsController@index')->where([
     'column'=>'^(?!admin|storage|api|\/)[\.\-\w]+$',

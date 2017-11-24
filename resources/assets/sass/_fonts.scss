@@ -18,3 +18,12 @@
 	url('../fonts/gagamond-medium.ttf?t=1486352811038') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
 	// url('./fonts/gagamond-medium.svg?t=1486352811038#gagamond-medium') format('svg'); /* iOS 4.1- */
 }
+@font-face{
+    font-family:'Glyphicons Halflings';
+    src:url(../fonts/glyphicons-halflings-regular.eot);
+    src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg');
+}
+.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';
+    font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+    &.glyphicon-home:before{content:"\e021"}
+}

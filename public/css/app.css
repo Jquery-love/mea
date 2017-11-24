@@ -18,6 +18,28 @@
   src: url(/fonts/gagamond-medium.eot?f19d0d74dd1b01274f70c86937106aaa) format("embedded-opentype"), url(/fonts/gagamond-medium.woff?e4d34ad3e46ca9a79e6b771dec414bcd) format("woff"), url(/fonts/gagamond-medium.ttf?a0054eb500deb67804a4cb7c7fe1bc7f) format("truetype");
 }
 
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(/fonts/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1);
+  src: url(/fonts/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1) format("embedded-opentype"), url(/fonts/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb) format("woff2"), url(/fonts/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158) format("woff"), url(/fonts/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512) format("truetype"), url(/fonts/glyphicons-halflings-regular.svg?89889688147bd7575d6327160d64e760) format("svg");
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon.glyphicon-home:before {
+  content: "\E021";
+}
+
 /**
 Positioning Mixin
 Sass:
@@ -1453,7 +1475,7 @@ a:hover {
 
 .page-bd .page-attention {
   padding: 5% 10%;
-  background-color: #ffde10;
+  background-color: #f2f2f2;
   margin-bottom: 6%;
   font-family: "Gagamond";
 }

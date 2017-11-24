@@ -12870,7 +12870,7 @@ window.miya = {
 				a.insertAfter(p);
 			}
 		},
-		responseWinSize: function responseWinSize() {
+		responseWinSize: function responseWinSize(cb) {
 			var winData = miya.ui.getW(),
 			    $bd = $('.page-bd'),
 			    $main = $('.page-main'),
@@ -12880,8 +12880,9 @@ window.miya = {
 				// miya.fn.exchange($main,$aside);
 				$main.insertAfter($aside);
 			} else if ($aside.next(".page-main").length) {
-				miya.fn.exchange($main, $aside);
+				$main.insertBefore($aside);
 			}
+			if (typeof cb == 'function') cb(winData);
 		}
 	}
 };

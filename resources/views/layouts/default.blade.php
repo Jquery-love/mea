@@ -28,6 +28,9 @@
             </div>
             <nav class="my-menu">
                 <div class="menu-wrap wp">
+                    <div class="menu-item">
+                        <a href="/" class="item-link"><span class="glyphicon glyphicon-home"></span></a>
+                    </div>
                     @foreach($colhd as $ctp)
                     <div class="menu-item">
                         @if($ctp->id == 1 || $ctp->id == 3)

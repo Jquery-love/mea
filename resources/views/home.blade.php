@@ -3,7 +3,9 @@
 <div class="banner layui-carousel">
     <div carousel-item>
         @foreach($banners as $banner)
-        <img src="{{ $banner->url }}" alt="{{ $banner->title }}">
+        <div class="banner-item">
+            <img src="{{ $banner->url }}" alt="{{ $banner->title }}">
+        </div>
         @endforeach
     </div>
 </div>
@@ -11,14 +13,21 @@
     layui.use('carousel', function(){
         var carousel = layui.carousel;
         //建造实例
-        carousel.render({
-            elem: '.banner'
-            ,width: '100%' //设置容器宽度
-            ,height: '530px'
-            ,indicator : 'none'
-            ,arrow: 'always' //始终显示箭头
-            //,anim: 'updown' //切换动画方式
+        miya.fn.responseWinSize(function(winData){
+            var height = '530px';
+            if(winData.innerWidth < 640){
+                height = '150px';
+            }
+            carousel.render({
+                elem: '.banner'
+                ,width: '100%' //设置容器宽度
+                ,height: height
+                ,indicator : 'none'
+                ,arrow: 'always' //始终显示箭头
+                //,anim: 'updown' //切换动画方式
+            });
         });
+
     });
 </script>
 @stop

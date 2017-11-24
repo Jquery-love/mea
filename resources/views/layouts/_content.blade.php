@@ -13,13 +13,13 @@
     $(function(){
         window.ue = UE.getEditor('container');
         window.formSubmit = function(){
-            document.forms[0].elements.desc.value=ue.getContent();
+            $("input.inputContent").val(ue.getContent());
             document.forms[0].submit();
         }
     });
 </script>
 <!-- 加载编辑器的容器 -->
-<input type="hidden" name="{{ isset($name) ? $name : 'contents' }}"  value="">
+<input type="hidden" name="{{ isset($name) ? $name : 'contents' }}" class="inputContent" value="">
 <script id="container" type="text/plain" style="width:880px;height:300px;">
     @if(isset($content) or !empty($content))
     {!! $content !!}

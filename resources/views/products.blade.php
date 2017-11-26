@@ -38,7 +38,7 @@
         if(winData.innerWidth < 640){
             offset = -120;
         }
-        miya.fn.scrollToElement(".page-aside",30,offset);
+        miya.fn.scrollToElement(".slt-wrap",30,offset);
     })
 </script>
 

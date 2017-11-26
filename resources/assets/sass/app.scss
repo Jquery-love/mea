@@ -154,7 +154,28 @@
                 .item-desc{display:none;}
 			}
 		}
-		.page-content{font-size:1.4rem;color:$gray-dark;}
+		.page-content{font-size:1.4rem;color:$gray-dark;
+			a{color:$orange;}
+			b,strong{font-weight: bold;}
+			blockquote{padding-left:10px;border-left:3px solid #ddd;}
+			img{vertical-align:inherit;}
+			.selectTdClass{background-color:#edf5fa !important}
+			p{clear:both;}
+			table.noBorderTable td,table.noBorderTable th,table.noBorderTable caption{border:1px dashed #ddd !important}
+			table{margin-bottom:10px;border-collapse:collapse;display:table;font-size:12px;line-height:1.5;max-width:880px;
+				caption{border:1px dashed $border-color;border-bottom:0;padding:3px;text-align:center;}
+				&.noBorderTable{
+					th,td,caption{border:1px dashed $border-color !important}
+				}
+				td,th{padding: 5px 10px;border: 1px solid $border-color;}
+				th{border-top:1px solid #BBB;background-color:#F7F7F7;}
+				tr.firstRow th{border-top-width:2px;}
+				td p{margin:0;padding:0;}
+
+			}
+			sup{vertical-align: super;}
+			sub{vertical-align: sub;}
+		}
 		.news-list{
 			.news-item{margin-top:3%;display:table;
 				&:first-child{margin-top:0;}

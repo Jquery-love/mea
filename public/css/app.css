@@ -1434,6 +1434,88 @@ a:hover {
   color: #666;
 }
 
+.page-bd .page-main .page-content a {
+  color: #ffde10;
+}
+
+.page-bd .page-main .page-content b,
+.page-bd .page-main .page-content strong {
+  font-weight: bold;
+}
+
+.page-bd .page-main .page-content blockquote {
+  padding-left: 10px;
+  border-left: 3px solid #ddd;
+}
+
+.page-bd .page-main .page-content img {
+  vertical-align: inherit;
+}
+
+.page-bd .page-main .page-content .selectTdClass {
+  background-color: #edf5fa !important;
+}
+
+.page-bd .page-main .page-content p {
+  clear: both;
+}
+
+.page-bd .page-main .page-content table.noBorderTable td,
+.page-bd .page-main .page-content table.noBorderTable th,
+.page-bd .page-main .page-content table.noBorderTable caption {
+  border: 1px dashed #ddd !important;
+}
+
+.page-bd .page-main .page-content table {
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  display: table;
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 880px;
+}
+
+.page-bd .page-main .page-content table caption {
+  border: 1px dashed #ddd;
+  border-bottom: 0;
+  padding: 3px;
+  text-align: center;
+}
+
+.page-bd .page-main .page-content table.noBorderTable th,
+.page-bd .page-main .page-content table.noBorderTable td,
+.page-bd .page-main .page-content table.noBorderTable caption {
+  border: 1px dashed #ddd !important;
+}
+
+.page-bd .page-main .page-content table td,
+.page-bd .page-main .page-content table th {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+}
+
+.page-bd .page-main .page-content table th {
+  border-top: 1px solid #BBB;
+  background-color: #F7F7F7;
+}
+
+.page-bd .page-main .page-content table tr.firstRow th {
+  border-top-width: 2px;
+}
+
+.page-bd .page-main .page-content table td p {
+  margin: 0;
+  padding: 0;
+}
+
+.page-bd .page-main .page-content sup {
+  vertical-align: super;
+}
+
+.page-bd .page-main .page-content sub {
+  vertical-align: sub;
+}
+
 .page-bd .page-main .news-list .news-item {
   margin-top: 3%;
   display: table;

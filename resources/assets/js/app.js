@@ -58,6 +58,23 @@ window.miya = {
 		}
     },
     fn : {
+    	scrollToElement: function(selector, time, verticalOffset,cb,scrollElement) {
+			time = typeof(time) != 'undefined' ? time : 500;
+			verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+			var offset = 0;
+			if(typeof selector == 'object' || typeof selector == 'string'){
+				offset = $(selector).offset();
+			}else if(typeof selector == 'number'){
+				offset = selector;
+			}
+			var offsetTop = offset.top + verticalOffset;
+			if(!scrollElement) scrollElement = 'html,body';
+			$(scrollElement).animate({
+				scrollTop: offsetTop
+			}, time,function(){
+				if(typeof cb == 'function') cb();
+			});
+		},
         scroll : function(callback,time,element){
 			var $scroll;
 			if(element && typeof element == 'string'){

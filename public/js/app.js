@@ -12772,6 +12772,7 @@ if (typeof jQuery === 'undefined') {
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -12834,6 +12835,23 @@ window.miya = {
 		}
 	},
 	fn: {
+		scrollToElement: function scrollToElement(selector, time, verticalOffset, cb, scrollElement) {
+			time = typeof time != 'undefined' ? time : 500;
+			verticalOffset = typeof verticalOffset != 'undefined' ? verticalOffset : 0;
+			var offset = 0;
+			if ((typeof selector === 'undefined' ? 'undefined' : _typeof(selector)) == 'object' || typeof selector == 'string') {
+				offset = $(selector).offset();
+			} else if (typeof selector == 'number') {
+				offset = selector;
+			}
+			var offsetTop = offset.top + verticalOffset;
+			if (!scrollElement) scrollElement = 'html,body';
+			$(scrollElement).animate({
+				scrollTop: offsetTop
+			}, time, function () {
+				if (typeof cb == 'function') cb();
+			});
+		},
 		scroll: function scroll(callback, time, element) {
 			var $scroll;
 			if (element && typeof element == 'string') {

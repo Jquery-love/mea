@@ -30,11 +30,12 @@
     $contents.hide().filter("div[id="+ id +"]").show();
     $sltItem.filter("a[href='#"+ id +"']").addClass('active');
 
-    $sltItem.on('click',function(){
+    $sltItem.on('click touchstart',function(){
         var $this = $(this),id = $this.attr('href').substr(1);
         $sltItem.removeClass('active');
         $this.addClass('active');
         $contents.hide().filter("div[id="+ id +"]").show();
+        miya.fn.scrollToElement(".page-main",30,-70);
     })
 </script>
 

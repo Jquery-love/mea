@@ -1805,5 +1805,9 @@ a:hover {
   html {
     font-size: 8px;
   }
+
+  .page-header .my-top .logo {
+    padding-top: 40px;
+  }
 }
 

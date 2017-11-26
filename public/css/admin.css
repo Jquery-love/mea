@@ -561,6 +561,10 @@ table.tablesorter thead tr th:hover {
   max-height: 160px;
 }
 
+.file-preview-image img {
+  max-width: 100%;
+}
+
 /* IE 10 fix */
 
 .btn-file::-ms-browse {

@@ -56,7 +56,7 @@
             </nav>
         </header>
         <script type="text/javascript">
-            $(".menu-item").on("click",".item-link",function(e){
+            $(".menu-item").on("touchstart click",".item-link",function(e){
                 e.stopPropagation();
                 var $this = $(this);
                 if($this.attr("href") == 'javascript:;'){
@@ -64,7 +64,7 @@
                     $this.closest(".menu-item").addClass("show")
                 }
             })
-            $("html,body").on("click",function(e){
+            $("html,body").on("touchstart click",function(e){
                 if(!$(e.target).closest(".menu-child").length){
                     $(".my-menu").find(".menu-item").removeClass("show");
                 }

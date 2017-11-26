@@ -1313,84 +1313,6 @@ a:hover {
   color: #999;
 }
 
-.page-bd .page-main .content a {
-  color: #e30613;
-}
-
-.page-bd .page-main .content b,
-.page-bd .page-main .content strong {
-  font-weight: bold;
-}
-
-.page-bd .page-main .content blockquote {
-  padding-left: 10px;
-  border-left: 3px solid #ddd;
-}
-
-.page-bd .page-main .content img {
-  vertical-align: middle;
-}
-
-.page-bd .page-main .content .selectTdClass {
-  background-color: #edf5fa !important;
-}
-
-.page-bd .page-main .content table.noBorderTable td,
-.page-bd .page-main .content table.noBorderTable th,
-.page-bd .page-main .content table.noBorderTable caption {
-  border: 1px dashed #ddd !important;
-}
-
-.page-bd .page-main .content table {
-  margin-bottom: 10px;
-  border-collapse: collapse;
-  display: table;
-  font-size: 12px;
-  line-height: 1.5;
-  max-width: 880px;
-}
-
-.page-bd .page-main .content table caption {
-  border: 1px dashed #ddd;
-  border-bottom: 0;
-  padding: 3px;
-  text-align: center;
-}
-
-.page-bd .page-main .content table.noBorderTable th,
-.page-bd .page-main .content table.noBorderTable td,
-.page-bd .page-main .content table.noBorderTable caption {
-  border: 1px dashed #ddd !important;
-}
-
-.page-bd .page-main .content table td,
-.page-bd .page-main .content table th {
-  padding: 5px 10px;
-  border: 1px solid #ddd;
-}
-
-.page-bd .page-main .content table th {
-  border-top: 1px solid #BBB;
-  background-color: #F7F7F7;
-}
-
-.page-bd .page-main .content table tr.firstRow th {
-  border-top-width: 2px;
-}
-
-.page-bd .page-main .content table td p {
-  margin: 0;
-  padding: 0;
-}
-
-.page-bd .page-main .content sup {
-  vertical-align: super;
-}
-
-.page-bd .page-main .content sub {
-  vertical-align: sub;
-}
-
 .page-bd .page-main .content.r {
   min-width: 60%;
   max-width: 65%;
@@ -1429,44 +1351,92 @@ a:hover {
   display: none;
 }
 
-.page-bd .page-main .page-content {
-  font-size: 1.4rem;
+.page-bd .page-main .page-content,
+.page-bd .page-main .content {
+  font-size: 14px;
   color: #666;
 }
 
-.page-bd .page-main .page-content a {
+.page-bd .page-main .page-content h1,
+.page-bd .page-main .content h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.page-bd .page-main .page-content h2,
+.page-bd .page-main .content h2 {
+  font-size: 1.5em;
+  margin: .83em 0;
+}
+
+.page-bd .page-main .page-content h3,
+.page-bd .page-main .content h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+.page-bd .page-main .page-content h4,
+.page-bd .page-main .content h4 {
+  margin: 0.1 0.33em 0;
+}
+
+.page-bd .page-main .page-content h5,
+.page-bd .page-main .content h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+.page-bd .page-main .page-content h6,
+.page-bd .page-main .content h6 {
+  font-size: 0.76em;
+  margin: 2.33em 0;
+}
+
+.page-bd .page-main .page-content a,
+.page-bd .page-main .content a {
   color: #ffde10;
 }
 
 .page-bd .page-main .page-content b,
-.page-bd .page-main .page-content strong {
+.page-bd .page-main .page-content strong,
+.page-bd .page-main .content b,
+.page-bd .page-main .content strong {
   font-weight: bold;
 }
 
-.page-bd .page-main .page-content blockquote {
+.page-bd .page-main .page-content blockquote,
+.page-bd .page-main .content blockquote {
   padding-left: 10px;
   border-left: 3px solid #ddd;
 }
 
-.page-bd .page-main .page-content img {
+.page-bd .page-main .page-content img,
+.page-bd .page-main .content img {
   vertical-align: inherit;
 }
 
-.page-bd .page-main .page-content .selectTdClass {
+.page-bd .page-main .page-content .selectTdClass,
+.page-bd .page-main .content .selectTdClass {
   background-color: #edf5fa !important;
 }
 
-.page-bd .page-main .page-content p {
+.page-bd .page-main .page-content p,
+.page-bd .page-main .content p {
   clear: both;
+  margin: 5px 0;
 }
 
 .page-bd .page-main .page-content table.noBorderTable td,
 .page-bd .page-main .page-content table.noBorderTable th,
-.page-bd .page-main .page-content table.noBorderTable caption {
+.page-bd .page-main .page-content table.noBorderTable caption,
+.page-bd .page-main .content table.noBorderTable td,
+.page-bd .page-main .content table.noBorderTable th,
+.page-bd .page-main .content table.noBorderTable caption {
   border: 1px dashed #ddd !important;
 }
 
-.page-bd .page-main .page-content table {
+.page-bd .page-main .page-content table,
+.page-bd .page-main .content table {
   margin-bottom: 10px;
   border-collapse: collapse;
   display: table;
@@ -1475,7 +1445,8 @@ a:hover {
   max-width: 880px;
 }
 
-.page-bd .page-main .page-content table caption {
+.page-bd .page-main .page-content table caption,
+.page-bd .page-main .content table caption {
   border: 1px dashed #ddd;
   border-bottom: 0;
   padding: 3px;
@@ -1484,35 +1455,45 @@ a:hover {
 
 .page-bd .page-main .page-content table.noBorderTable th,
 .page-bd .page-main .page-content table.noBorderTable td,
-.page-bd .page-main .page-content table.noBorderTable caption {
+.page-bd .page-main .page-content table.noBorderTable caption,
+.page-bd .page-main .content table.noBorderTable th,
+.page-bd .page-main .content table.noBorderTable td,
+.page-bd .page-main .content table.noBorderTable caption {
   border: 1px dashed #ddd !important;
 }
 
 .page-bd .page-main .page-content table td,
-.page-bd .page-main .page-content table th {
+.page-bd .page-main .page-content table th,
+.page-bd .page-main .content table td,
+.page-bd .page-main .content table th {
   padding: 5px 10px;
   border: 1px solid #ddd;
 }
 
-.page-bd .page-main .page-content table th {
+.page-bd .page-main .page-content table th,
+.page-bd .page-main .content table th {
   border-top: 1px solid #BBB;
   background-color: #F7F7F7;
 }
 
-.page-bd .page-main .page-content table tr.firstRow th {
+.page-bd .page-main .page-content table tr.firstRow th,
+.page-bd .page-main .content table tr.firstRow th {
   border-top-width: 2px;
 }
 
-.page-bd .page-main .page-content table td p {
+.page-bd .page-main .page-content table td p,
+.page-bd .page-main .content table td p {
   margin: 0;
   padding: 0;
 }
 
-.page-bd .page-main .page-content sup {
+.page-bd .page-main .page-content sup,
+.page-bd .page-main .content sup {
   vertical-align: super;
 }
 
-.page-bd .page-main .page-content sub {
+.page-bd .page-main .page-content sub,
+.page-bd .page-main .content sub {
   vertical-align: sub;
 }
 
@@ -1565,7 +1546,7 @@ a:hover {
 }
 
 .page-bd .page-attention h3 {
-  font-size: 4.8rem;
+  font-size: 3.6rem;
   font-weight: bold;
   margin-bottom: 1%;
 }

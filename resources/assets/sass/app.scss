@@ -123,26 +123,6 @@
 				.time{font-size:1.2rem;color:$gray;}
 			}
 		}
-        .content{
-            a{color:#e30613;}
-			b,strong{font-weight: bold;}
-			blockquote{padding-left:10px;border-left:3px solid #ddd;}
-			img{vertical-align:middle;}
-			.selectTdClass{background-color:#edf5fa !important}
-			table.noBorderTable td,table.noBorderTable th,table.noBorderTable caption{border:1px dashed #ddd !important}
-			table{margin-bottom:10px;border-collapse:collapse;display:table;font-size:12px;line-height:1.5;max-width:880px;
-				caption{border:1px dashed $border-color;border-bottom:0;padding:3px;text-align:center;}
-				&.noBorderTable{
-					th,td,caption{border:1px dashed $border-color !important}
-				}
-				td,th{padding: 5px 10px;border: 1px solid $border-color;}
-				th{border-top:1px solid #BBB;background-color:#F7F7F7;}
-				tr.firstRow th{border-top-width:2px;}
-				td p{margin:0;padding:0;}
-			}
-			sup{vertical-align: super;}
-			sub{vertical-align: sub;}
-        }
 		.content.r{min-width:60%;max-width:65%;}
 		.case-list{font-size:0;
 			.case-item{width:32%;display:inline-block;vertical-align: top;margin-left:2%;
@@ -154,13 +134,19 @@
                 .item-desc{display:none;}
 			}
 		}
-		.page-content{font-size:1.4rem;color:$gray-dark;
+		.page-content,.content{font-size:14px;color:$gray-dark;
+			h1{font-size:2em;margin:.67em 0;}
+			h2{font-size:1.5em;margin:.83em 0;}
+			h3{font-size:1.17em;margin:1em 0;}
+			h4{margin:.1.33em 0;}
+			h5{font-size:0.83em;margin:1.67em 0;}
+			h6{font-size:0.76em;margin:2.33em 0;}
 			a{color:$orange;}
 			b,strong{font-weight: bold;}
 			blockquote{padding-left:10px;border-left:3px solid #ddd;}
 			img{vertical-align:inherit;}
 			.selectTdClass{background-color:#edf5fa !important}
-			p{clear:both;}
+			p{clear:both;margin:5px 0;}
 			table.noBorderTable td,table.noBorderTable th,table.noBorderTable caption{border:1px dashed #ddd !important}
 			table{margin-bottom:10px;border-collapse:collapse;display:table;font-size:12px;line-height:1.5;max-width:880px;
 				caption{border:1px dashed $border-color;border-bottom:0;padding:3px;text-align:center;}
@@ -191,7 +177,7 @@
 		}
 	}
 	.page-attention{padding:5% 3%;background-color:#f2f2f2;margin-bottom:6%;font-family:"Gagamond";display:block;
-		h3{font-size:4.8rem;font-weight:bold;margin-bottom:1%;}
+		h3{font-size:3.6rem;font-weight:bold;margin-bottom:1%;}
 		p{font-size:1.6rem;}
         &:hover{color:#999;}
 	}

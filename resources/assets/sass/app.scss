@@ -63,8 +63,8 @@
 		}
 	}
 }
-.banner{position:relative;z-index:9;overflow:hidden;
-	img{text-align:center;}
+.banner{position:relative;z-index:9;overflow:hidden;max-width:1100px;margin:0 auto;
+	img{text-align:center;height:100%;}
 }
 .case-intro{margin-top:6%;margin-bottom:6%;
     .case-hd{font-size:3rem;

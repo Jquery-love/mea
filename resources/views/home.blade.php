@@ -14,9 +14,9 @@
         var carousel = layui.carousel;
         //建造实例
         miya.fn.responseWinSize(function(winData){
-            var height = '530px';
+            var height = '550px';
             if(winData.innerWidth < 640){
-                height = '150px';
+                height = '320px';
             }
             carousel.render({
                 elem: '.banner'

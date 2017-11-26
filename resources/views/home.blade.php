@@ -15,8 +15,10 @@
         //建造实例
         miya.fn.responseWinSize(function(winData){
             var height = '550px';
-            if(winData.innerWidth < 640){
+            if(winData.innerWidth <= 640 && winData.innerWidth > 320){
                 height = '207px';
+            }else if( winData.innerWidth <= 320){
+                height = '160px';
             }
             carousel.render({
                 elem: '.banner'

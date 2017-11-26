@@ -31,11 +31,14 @@
     $sltItem.filter("a[href='#"+ id +"']").addClass('active');
 
     $sltItem.on('click touchstart',function(){
-        var $this = $(this),id = $this.attr('href').substr(1);
+        var $this = $(this),id = $this.attr('href').substr(1),winData = miya.ui.getW(),offset = -70;
         $sltItem.removeClass('active');
         $this.addClass('active');
         $contents.hide().filter("div[id="+ id +"]").show();
-        miya.fn.scrollToElement(".page-main",30,-70);
+        if(winData.innerWidth < 640){
+            offset = -120;
+        }
+        miya.fn.scrollToElement(".page-aside",30,offset);
     })
 </script>
 

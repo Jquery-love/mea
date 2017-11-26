@@ -1113,6 +1113,14 @@ a:hover {
   margin: 0 auto;
 }
 
+.banner.layui-carousel {
+  background-color: #fff;
+}
+
+.banner.layui-carousel > [carousel-item] > * {
+  background-color: #fff;
+}
+
 .banner img {
   text-align: center;
   height: 100%;

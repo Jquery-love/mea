@@ -1801,3 +1801,9 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 10px;
+  }
+}
+

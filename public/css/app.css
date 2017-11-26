@@ -1771,6 +1771,10 @@ a:hover {
     margin-top: 3%;
   }
 
+  .banner img {
+    height: auto;
+  }
+
   .page-ft .ft-extra {
     padding-top: 3%;
   }

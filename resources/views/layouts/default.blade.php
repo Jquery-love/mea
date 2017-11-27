@@ -78,7 +78,7 @@
                     $this.closest(".menu-item").addClass("show")
                 }
             })
-            $(".my-menu").on("touchstart",".menu-btn",function(e){
+            $(".my-menu").on("click",".menu-btn",function(e){
                 e.stopPropagation();
                 var $this = $(this),$menuWrap = $('.menu-wrap'),$menu= $(".my-menu");
                 $menu.toggleClass('show');

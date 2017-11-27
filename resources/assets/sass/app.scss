@@ -281,8 +281,8 @@
         }
         .page-recommend{
 			.recommend-list{
-				.recommend-item{margin-left:0;width:100%;display:block;
-					
+				.recommend-item{margin-left:0;width:100%;display:block;margin-top:3%;
+					&:first-child{margin-top:0;}
 				}
 			}
 		}

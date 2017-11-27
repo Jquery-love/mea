@@ -1899,6 +1899,11 @@ a:hover {
     margin-left: 0;
     width: 100%;
     display: block;
+    margin-top: 3%;
+  }
+
+  .page-bd .page-recommend .recommend-list .recommend-item:first-child {
+    margin-top: 0;
   }
 
   .page-bd .page-main {

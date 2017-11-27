@@ -1348,6 +1348,7 @@ a:hover {
   display: inline-block;
   vertical-align: top;
   margin-left: 2%;
+  margin-bottom: 3%;
 }
 
 .page-bd .page-main .case-list .case-item:nth-child(3n+1) {

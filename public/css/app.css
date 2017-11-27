@@ -1070,7 +1070,7 @@ a:hover {
 }
 
 .page-header .my-menu .menu-item .item-link .glyphicon {
-  vertical-align: -1px;
+  vertical-align: 0px;
   font-size: 1rem;
   -webkit-transform: scale(0.8);
   transform: scale(0.8);

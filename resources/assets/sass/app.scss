@@ -49,7 +49,7 @@
 		.menu-item{line-height:50px;font-size:1.4rem;padding:0 1.2rem;font-weight:bold;display:inline-block;
 			.item-link{
 				&.active{color:$red;}
-				.glyphicon{vertical-align:-1px;font-size:1rem;@include scale(.8);}
+				.glyphicon{vertical-align:0px;font-size:1rem;@include scale(.8);}
 			}
             &:first-child{margin-left:-1.2rem;
             	.glyphicon{font-size:1.4rem;@include scale(1);}

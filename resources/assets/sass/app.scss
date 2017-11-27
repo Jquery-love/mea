@@ -231,18 +231,18 @@
             }
 			
         }
-        .my-menu{padding-left:0;padding:10px 0;position:relative;
-        	.menu-btn{display:flex;justify-content:space-between;padding:0 3%;text-align: center;font-size:20px;line-height:40px;
+        .my-menu{padding-left:0;position:relative;
+        	.menu-btn{display:flex;justify-content:space-between;padding:0 3%;text-align: center;font-size:20px;line-height:50px;
         		span{font-size:14px;}
 				.navbar-toggle{background-color:transparent;border:0;width:40px;text-align: center;line-height:0;font-size:0;
 					.icon-bar{@include size(22px,2px);background-color: #000;display:inline-block;margin-top:3px;}
 				}
 			}
 			&.show{
-				.menu-btn{border-bottom:1px solid #e6e6e6;margin-bottom:3%;}
-				.menu-wrap{height:auto;max-height:240px;overflow:scroll;}
+				.menu-btn{border-bottom:1px solid #e6e6e6;}
+				.menu-wrap{height:auto;max-height:260px;overflow:scroll;}
 			}
-			.menu-wrap{height:0;overflow:hidden;@include transition(all ease-in .3s);}
+			.menu-wrap{height:0;overflow:hidden;}
             .menu-item{line-height:40px;display:block;font-size:1.6rem;
             	.item-link{display:block;}
                 &:first-child{display:none;}

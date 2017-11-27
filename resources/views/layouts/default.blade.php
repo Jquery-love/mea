@@ -85,10 +85,20 @@
             $(".my-menu").on("click",".menu-btn",function(e){
                 e.stopPropagation();
                 var $this = $(this),$menuWrap = $('.menu-wrap'),$menu= $(".my-menu");
-                $menu.toggleClass('show');
+                if($menu.hasClass('show')){
+                    $menu.removeClass('show');
+                    $menuWrap.css('height',0);
+                }else{
+                    $menu.addClass('show');
+                    $menuWrap.animate({
+                        height : '240px'
+                    },300,function(){
+                        $menuWrap.css('height','auto');
+                    });
+                }
             })
             $("html,body").on("touchstart click",function(e){
-                if(!$(e.target).closest(".menu-child").length && !$(e.target).closest(".show").length){
+                if(!$(e.target).closest(".menu-child").length && !$(e.target).closest(".show").length && !$(e.target).hasClass("menu-btn")){
                     $(".my-menu").find(".menu-item").removeClass("show");
                 }
                 console.log(e);

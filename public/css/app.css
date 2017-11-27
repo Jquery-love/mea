@@ -1720,7 +1720,6 @@ a:hover {
 
   .page-header .my-menu {
     padding-left: 0;
-    padding: 10px 0;
     position: relative;
   }
 
@@ -1734,7 +1733,7 @@ a:hover {
     padding: 0 3%;
     text-align: center;
     font-size: 20px;
-    line-height: 40px;
+    line-height: 50px;
   }
 
   .page-header .my-menu .menu-btn span {
@@ -1760,20 +1759,17 @@ a:hover {
 
   .page-header .my-menu.show .menu-btn {
     border-bottom: 1px solid #e6e6e6;
-    margin-bottom: 3%;
   }
 
   .page-header .my-menu.show .menu-wrap {
     height: auto;
-    max-height: 240px;
+    max-height: 260px;
     overflow: scroll;
   }
 
   .page-header .my-menu .menu-wrap {
     height: 0;
     overflow: hidden;
-    -webkit-transition: all ease-in 0.3s;
-    transition: all ease-in 0.3s;
   }
 
   .page-header .my-menu .menu-item {

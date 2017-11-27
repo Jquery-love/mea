@@ -42,8 +42,19 @@
         <div class="wc-ft"><a href="{{ $colhd[0]->childColumns[0]->path }}" class="link-about">关于公司</a></div>
     </div>
 </div>
-<a class="page-attention" href="/{{ $exhibitionContent->column->path }}/{{ $exhibitionContent->id }}">
-    <h3>{{ $exhibitionContent->title }}</h3>
-    <p>{{ $exhibitionContent->intro }}</p>
-</a>
+<div class="page-news">
+    @foreach($newests as $news)
+    <a class="news-item" href="/{{ $news->column->path ? $news->column->path : $news->column->id }}/{{ $news->path ? $news->path : $news->id }}">
+        @if($news->pic)
+        <div class="news-img"><img src="{{ $news->pic }}" alt="{{ $news->title }}"></div>
+        @endif
+        <div class="news-info">
+            <div class="news-title">{{ $news->title }}</div>
+            <div class="news-time">{{ $news->updated_at }}</div>
+            <div class="news-desc"><pre>{{ $news->intro }}</pre></div>
+        </div>
+    </a>
+    @endforeach
+</div>
+
 @stop

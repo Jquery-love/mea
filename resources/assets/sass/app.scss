@@ -88,7 +88,7 @@
 .page-bd{margin-top:6%;margin-bottom:6%;
     &.cup{@include cup(lm,350px,40px);}
     .page-aside{margin-bottom:6%;
-        .aside-hd{font-size:3.3rem;margin-bottom:6%;font-weight:bold;margin-top:-5px;}
+        .aside-hd{font-size:3rem;margin-bottom:6%;font-weight:bold;margin-top:-5px;}
         .slt-wrap{width:100%;
 			.slt-hd{font-size:2rem;font-weight:bold;padding-bottom:3%;}
 			.slt-list{position:relative;display:inline-block;

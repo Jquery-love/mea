@@ -200,7 +200,7 @@
 				}
 				&:first-child{margin-left:0;}
 				.recommend-info{@include absolute(bottom 0 left 0 right 0);background-color:$gray-light;@include transition(all ease-in .5s);padding:2% 3%;
-					.recommend-title{font-size:2.4rem;}
+					.recommend-title{font-size:2rem;}
 				}
 				&:hover{
 					.recommend-info{background-color: #eee;}

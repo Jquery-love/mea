@@ -180,10 +180,10 @@
 		.news-list{
 			.news-item{margin-top:3%;display:table;width:100%;
 				&:first-child{margin-top:0;}
-				.news-img{width:350px;display:table-cell;vertical-align: top;
+				.news-img{width:350px;display:table-cell;vertical-align: top;padding-right:2%;
 					img{width:100%;max-height:300px;}
 				}
-				.news-info{padding-left:2%;display:table-cell;vertical-align: top;
+				.news-info{display:table-cell;vertical-align: top;
 					.news-title{font-size:1.8rem;font-weight:bold;}
 					.news-time{margin-top:3%;color:$gray;}
 					.news-desc{margin-top:3%;}

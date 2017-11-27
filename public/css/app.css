@@ -1570,6 +1570,7 @@ a:hover {
   width: 350px;
   display: table-cell;
   vertical-align: top;
+  padding-right: 2%;
 }
 
 .page-bd .page-main .news-list .news-item .news-img img {
@@ -1578,7 +1579,6 @@ a:hover {
 }
 
 .page-bd .page-main .news-list .news-item .news-info {
-  padding-left: 2%;
   display: table-cell;
   vertical-align: top;
 }

@@ -191,6 +191,20 @@
 			}
 		}
 	}
+	.page-recommend{margin-top:5%;
+		.recommend-hd{font-size:1.6rem;padding:5px 20px;background-color:$orange;font-weight:bold;}
+		.recommend-list{margin-top:20px;
+			.recommend-item{margin-left:2%;width:32%;display:inline-block;position: relative;
+				&:first-child{margin-left:0;}
+				.recommend-info{@include absolute(bottom 0 left 0 right 0);background-color:$gray-light;@include transition(all ease-in .5s);padding:2% 3%;
+					.recommend-title{font-size:2.4rem;}
+				}
+				&:hover{
+					.recommend-info{background-color: #eee;}
+				}
+			}
+		}
+	}
 	.page-attention{padding:5% 3%;background-color:#f2f2f2;margin-bottom:6%;font-family:"Gagamond";display:block;
 		h3{font-size:3.6rem;font-weight:bold;margin-bottom:1%;}
 		p{font-size:1.6rem;}

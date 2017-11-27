@@ -42,19 +42,38 @@
         <div class="wc-ft"><a href="{{ $colhd[0]->childColumns[0]->path }}" class="link-about">关于公司</a></div>
     </div>
 </div>
-<div class="page-news">
-    @foreach($newests as $news)
-    <a class="news-item" href="/{{ $news->column->path ? $news->column->path : $news->column->id }}/{{ $news->path ? $news->path : $news->id }}">
-        @if($news->pic)
-        <div class="news-img"><img src="{{ $news->pic }}" alt="{{ $news->title }}"></div>
-        @endif
-        <div class="news-info">
-            <div class="news-title">{{ $news->title }}</div>
-            <div class="news-time">{{ $news->updated_at }}</div>
-            <div class="news-desc"><pre>{{ $news->intro }}</pre></div>
-        </div>
-    </a>
-    @endforeach
+@if(count($cases) > 0)
+<div class="page-recommend">
+    <div class="recommend-hd"></div>
+    <div class="recommend-list">
+        @foreach($cases as $case)
+        <a class="recommend-item" href="/{{ $case->column->path ? $case->column->path : $case->column->id }}/{{ $case->path ? $case->path : $case->id }}">
+            @if($case->pic)
+            <div class="recommend-img"><img src="{{ $case->pic }}" alt="{{ $case->title }}"></div>
+            @endif
+            <div class="recommend-info">
+                <div class="recommend-title">{{ $case->title }}</div>
+            </div>
+        </a>
+        @endforeach
+    </div>
 </div>
-
+@endif
+@if(count($newests) > 0)
+<div class="page-recommend">
+    <div class="recommend-hd">是的法定</div>
+    <div class="recommend-list">
+        @foreach($newests as $news)
+        <a class="recommend-item" href="/{{ $news->column->path ? $news->column->path : $news->column->id }}/{{ $news->path ? $news->path : $news->id }}">
+            @if($news->pic)
+            <div class="recommend-img"><img src="{{ $news->pic }}" alt="{{ $news->title }}"></div>
+            @endif
+            <div class="recommend-info">
+                <div class="recommend-title">{{ $news->title }}</div>
+            </div>
+        </a>
+        @endforeach
+    </div>
+</div>
+@endif
 @stop

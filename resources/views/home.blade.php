@@ -58,18 +58,6 @@
             </a>
             @endforeach
         @endif
-        @if(count($newests) > 0)
-            @foreach($newests as $news)
-            <a class="recommend-item" href="/{{ $news->column->path ? $news->column->path : $news->column->id }}/{{ $news->path ? $news->path : $news->id }}">
-                @if($news->pic)
-                <div class="recommend-img"><img src="{{ $news->pic }}" alt="{{ $news->title }}"></div>
-                @endif
-                <div class="recommend-info">
-                    <div class="recommend-title">{{ $news->title }}</div>
-                </div>
-            </a>
-            @endforeach
-        @endif
     </div>
 </div>
 @stop

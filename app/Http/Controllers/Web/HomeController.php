@@ -16,7 +16,7 @@ class HomeController extends Controller
         $colft = $column->where('parent_id',0)->orderBy('sort','asc')->find([6,7,8,9]);
         $banners = $files->where([['application','=',2],['column_id','=',0]])->orderBy('sort','asc')->get();
         $company = $column->find(10);
-        $cases = $content->whereIn('column_id',[4,9])->where('recommend',1)->orderBy('updated_at','desc')->get();
+        $cases = $content->whereIn('column_id',[9])->where('recommend',1)->orderBy('updated_at','desc')->get();
         return view('home',compact('colhd','colft','company','banners','newests','cases'));
     }
 }

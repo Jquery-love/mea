@@ -44,7 +44,7 @@
 </div>
 
 <div class="page-recommend">
-    <div class="recommend-hd"></div>
+    <div class="recommend-hd">焦点资讯</div>
     <div class="recommend-list">
         @if(count($cases) > 0)
             @foreach($cases as $case)

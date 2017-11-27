@@ -70,12 +70,16 @@
             </nav>
         </header>
         <script type="text/javascript">
-            $(".menu-item").on("touchstart click",".item-link",function(e){
+            $(".my-menu").on("click",".item-link",function(e){
                 e.stopPropagation();
                 var $this = $(this);
                 if($this.attr("href") == 'javascript:;'){
-                    $this.closest(".my-menu").find(".menu-item").removeClass("show")
-                    $this.closest(".menu-item").addClass("show")
+                    if($this.closest(".menu-item").hasClass('show')){
+                        $this.closest(".my-menu").find(".menu-item").removeClass("show");
+                    }else{
+                        $this.closest(".my-menu").find(".menu-item").removeClass("show");
+                        $this.closest(".menu-item").addClass("show");
+                    }
                 }
             })
             $(".my-menu").on("click",".menu-btn",function(e){
@@ -84,7 +88,7 @@
                 $menu.toggleClass('show');
             })
             $("html,body").on("touchstart click",function(e){
-                if(!$(e.target).closest(".menu-child").length){
+                if(!$(e.target).closest(".menu-child").length && !$(e.target).closest(".show").length){
                     $(".my-menu").find(".menu-item").removeClass("show");
                 }
                 console.log(e);

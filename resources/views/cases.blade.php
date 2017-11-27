@@ -48,6 +48,5 @@
         sltHeight = $sltList.outerHeight();
     }
     $sltList.closest(".page-aside").css("min-height",sltHeight);
-
 </script>
 @stop

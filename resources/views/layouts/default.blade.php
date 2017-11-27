@@ -33,15 +33,21 @@
                     </div>
                     @foreach($colhd as $ctp)
                     <div class="menu-item">
+                        <!-- 关于米亚1 产品型号3 栏目 -->
                         @if($ctp->id == 1 || $ctp->id == 3)
                             <a href="javascript:;" class="item-link {{ (isset($parent) && $parent->id == $ctp->id) ? 'active' : '' }}">{{ $ctp->title }}</a>
                         @else
-                            <a href="/{{ $ctp->path ? $ctp->path : $ctp->id }}" class="item-link {{ isset($parent) && $parent->id == $ctp->id ? 'active' : '' }}">{{ $ctp->title }}</a>
+                            <!-- 案例应用 -->
+                            @if($ctp->id == 4)
+                                <a href="/{{ $ctp->childColumns()->orderBy('sort','asc')->first()->path ? $ctp->childColumns()->orderBy('sort','asc')->first()->path : $ctp->childColumns()->orderBy('sort','asc')->first()->id }}" class="item-link {{ isset($parent) && $parent->id == $ctp->id ? 'active' : '' }}">{{ $ctp->title }}</a>
+                            @else
+                                <a href="/{{ $ctp->path ? $ctp->path : $ctp->id }}" class="item-link {{ isset($parent) && $parent->id == $ctp->id ? 'active' : '' }}">{{ $ctp->title }}</a>
+                            @endif
                         @endif
                         @if(count($ctp->childColumns) > 0 && ($ctp->id == 1 || $ctp->id == 3))
                         <div class="menu-child">
                             <div class="menu-list">
-                                @foreach($ctp->childColumns as $cld)
+                                @foreach($ctp->childColumns()->orderBy("sort",'asc')->get() as $cld)
                                     <a href="/{{ $cld->path ? $cld->path : $cld->id }}" class="item-link {{ isset($column) && $column->id == $cld->id ? 'active' : '' }}">{{ $cld->title }}</a>
                                 @endforeach
                             </div>

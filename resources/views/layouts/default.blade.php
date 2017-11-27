@@ -29,20 +29,20 @@
             <nav class="my-menu">
                 <div class="menu-wrap wp">
                     <div class="menu-item">
-                        <a href="/" class="item-link"><span class="glyphicon glyphicon-home"></span></a>
+                        <a href="/" class="item-link {{ !isset($parent) ? 'active' : '' }}"><span class="glyphicon glyphicon-home"></span></a>
                     </div>
                     @foreach($colhd as $ctp)
                     <div class="menu-item">
                         @if($ctp->id == 1 || $ctp->id == 3)
-                            <a href="javascript:;" class="item-link">{{ $ctp->title }}</a>
+                            <a href="javascript:;" class="item-link {{ (isset($parent) && $parent->id == $ctp->id) ? 'active' : '' }}">{{ $ctp->title }}</a>
                         @else
-                            <a href="/{{ $ctp->path ? $ctp->path : $ctp->id }}" class="item-link">{{ $ctp->title }}</a>
+                            <a href="/{{ $ctp->path ? $ctp->path : $ctp->id }}" class="item-link {{ isset($parent) && $parent->id == $ctp->id ? 'active' : '' }}">{{ $ctp->title }}</a>
                         @endif
                         @if(count($ctp->childColumns) > 0 && ($ctp->id == 1 || $ctp->id == 3))
                         <div class="menu-child">
                             <div class="menu-list">
                                 @foreach($ctp->childColumns as $cld)
-                                    <a href="/{{ $cld->path ? $cld->path : $cld->id }}" class="item-link">{{ $cld->title }}</a>
+                                    <a href="/{{ $cld->path ? $cld->path : $cld->id }}" class="item-link {{ isset($column) && $column->id == $cld->id ? 'active' : '' }}">{{ $cld->title }}</a>
                                 @endforeach
                             </div>
                             <div class="menu-brand">

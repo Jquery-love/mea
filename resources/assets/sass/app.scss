@@ -46,6 +46,9 @@
         &.fixed{position:fixed;left:0;right:0;top:0;margin-top:0;}
         .menu-wrap{position:relative;}
 		.menu-item{line-height:50px;font-size:1.4rem;padding:0 1.2rem;font-weight:bold;display:inline-block;
+			.item-link{
+				&.active{color:$red;}
+			}
             &:first-child{margin-left:-1.2rem;}
 			&:hover{color:$red;}
             &.show{
@@ -55,7 +58,9 @@
 			.menu-child{position:absolute;top:50px;left:0;background-color:#fff;width:100%;padding:3%;justify-content:space-between;display:none;border-top-color:transparent;box-shadow:1px 1px 8px 0 rgba(0,0,0,0.2);
 				.menu-list,.menu-brand{display:inline-block;vertical-align:top;}
 				.menu-list{min-width:30%;border-right:1px solid $base-color;padding-right:3%;
-					.item-link{display:block;border-bottom:1px dashed $gray;}
+					.item-link{display:block;border-bottom:1px dashed $gray;
+						&.active{color:$red;}
+					}
 				}
 				.menu-brand{padding-left:3%;
 					img{max-height:200px;}
@@ -83,7 +88,7 @@
 .page-bd{margin-top:6%;margin-bottom:6%;
     &.cup{@include cup(lm,350px,40px);}
     .page-aside{margin-bottom:6%;
-        .aside-hd{font-size:3.5rem;margin-bottom:6%;}
+        .aside-hd{font-size:3.3rem;margin-bottom:6%;font-weight:bold;margin-top:-5px;}
         .slt-wrap{width:100%;
 			.slt-hd{font-size:2rem;font-weight:bold;padding-bottom:3%;}
 			.slt-list{position:relative;display:inline-block;

@@ -1041,6 +1041,10 @@ a:hover {
   display: inline-block;
 }
 
+.page-header .my-menu .menu-item .item-link.active {
+  color: #e30613;
+}
+
 .page-header .my-menu .menu-item:first-child {
   margin-left: -1.2rem;
 }
@@ -1095,6 +1099,10 @@ a:hover {
 .page-header .my-menu .menu-item .menu-child .menu-list .item-link {
   display: block;
   border-bottom: 1px dashed #999;
+}
+
+.page-header .my-menu .menu-item .menu-child .menu-list .item-link.active {
+  color: #e30613;
 }
 
 .page-header .my-menu .menu-item .menu-child .menu-brand {
@@ -1196,8 +1204,10 @@ a:hover {
 }
 
 .page-bd .page-aside .aside-hd {
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   margin-bottom: 6%;
+  font-weight: bold;
+  margin-top: -5px;
 }
 
 .page-bd .page-aside .slt-wrap {

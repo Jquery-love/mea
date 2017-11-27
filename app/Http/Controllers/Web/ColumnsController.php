@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Column;
 
+
 class ColumnsController extends Controller
 {
     //
@@ -23,9 +24,9 @@ class ColumnsController extends Controller
         //顶级栏目
         $parent = $column->parentTopId($column->id);
         if(sizeOf($column->allContents) == 0 && $parent->id == 4){
-            $contents = $column->childContents;
+            $contents = $column->childContents()->orderBy('sort','asc')->orderBy('updated_at','desc')->get();
         }else{
-            $contents = $column->allContents;
+            $contents = $column->allContents()->orderBy('sort','asc')->orderBy('updated_at','desc')->get();
         }
         return view($column->template,compact('colhd','colft','column','contents','parent'));
     }

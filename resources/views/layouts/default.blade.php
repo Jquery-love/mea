@@ -98,7 +98,7 @@
                 menuOffset = $menu.offset();
             miya.fn.scroll(function(){
                 var winData = miya.ui.getW();
-                if(winData.innerWidth < 640 && $(document.body).height() - winData.innerHeight < 300){
+                if($(document.body).height() - winData.innerHeight < 300){
                     return;
                 }
                 if(winData.scrollY > menuOffset.top){

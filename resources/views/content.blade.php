@@ -44,11 +44,13 @@
 <script type="text/javascript">
     var $sltList = $('.slt-list'),$sltItem = $sltList.find('.slt-item'),
         sltHeight = 60;
-    if($sltList.find(".slt-item.active .slt-list").length){
-        sltHeight = $sltList.find(".slt-item.active .slt-list").outerHeight();
-    }else{
-        sltHeight = $sltList.outerHeight();
+    if($sltList.length){
+        if($sltList.find(".slt-item.active .slt-list").length){
+            sltHeight = $sltList.find(".slt-item.active .slt-list").outerHeight();
+        }else{
+            sltHeight = $sltList.outerHeight();
+        }
+        $sltList.closest(".page-aside").css("min-height",sltHeight);
     }
-    $sltList.closest(".page-aside").css("min-height",sltHeight);
 </script>
 @stop

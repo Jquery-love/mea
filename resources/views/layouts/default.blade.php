@@ -12,30 +12,38 @@
     </head>
     <body>
         <header class="page-header">
-            <div class="my-top cf wp">
-                <a href="/" class="logo l">MEA <strong>Building success</strong></a>
-                <div class="r top-tool">
+            <div class="my-top wp">
+                <a href="/" class="logo">MEA <strong>Building success</strong></a>
+                <div class="top-tool">
                     <form class="search ib" action="/search" method="get">
                         <input type="text" placeholder="search" name="s" value="">
                         <input type="submit" value="搜索"/>
                     </form>
                     <div class="web-sw-list ib">
-                        <a class="ch active" href="#">简体中文</a>
-                        <a class="en" href="#">英语</a>
-                        <a class="de" href="#">德语</a>
+                        <a class="ch active" href="http://www.meachina.com/">简体中文</a>
+                        <a class="en" href="https://www.mea-group.com/en/">英语</a>
+                        <a class="de" href="https://www.mea-group.com/de/">德语</a>
                     </div>
                 </div>
             </div>
             <nav class="my-menu">
+                <div class="menu-btn">
+                    <span>菜单</span>
+                    <button type="button" class="navbar-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
                 <div class="menu-wrap wp">
                     <div class="menu-item">
-                        <a href="/" class="item-link {{ !isset($parent) ? 'active' : '' }}"><span class="glyphicon glyphicon-home"></span></a>
+                        <a href="/" class="item-link {{ !isset($parent) ? 'active' : '' }}"><i class="glyphicon glyphicon-home"></i></a>
                     </div>
                     @foreach($colhd as $ctp)
                     <div class="menu-item">
                         <!-- 关于米亚1 产品型号3 栏目 -->
                         @if($ctp->id == 1 || $ctp->id == 3)
-                            <a href="javascript:;" class="item-link {{ (isset($parent) && $parent->id == $ctp->id) ? 'active' : '' }}">{{ $ctp->title }}</a>
+                            <a href="javascript:;" class="item-link {{ (isset($parent) && $parent->id == $ctp->id) ? 'active' : '' }}">{{ $ctp->title }} <i class="glyphicon glyphicon-triangle-bottom"></i></a>
                         @else
                             <!-- 案例应用 -->
                             @if($ctp->id == 4)
@@ -69,6 +77,11 @@
                     $this.closest(".my-menu").find(".menu-item").removeClass("show")
                     $this.closest(".menu-item").addClass("show")
                 }
+            })
+            $(".my-menu").on("touchstart",".menu-btn",function(e){
+                e.stopPropagation();
+                var $this = $(this),$menuWrap = $('.menu-wrap'),$menu= $(".my-menu");
+                $menu.toggleClass('show');
             })
             $("html,body").on("touchstart click",function(e){
                 if(!$(e.target).closest(".menu-child").length){

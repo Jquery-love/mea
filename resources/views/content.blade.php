@@ -31,7 +31,7 @@
                     @if($col->childColumns->count() > 0)
                     <div class="slt-list">
                         @foreach($col->childColumns()->orderBy('sort','asc')->get() as $cld)
-                        <a class="slt-item {{ $column->id == $cld->id ? 'active' : '' }}" href="{{ $cld->path ? $cld->path : $cld->id }}"><i class="icon"></i> {{ $cld->title }}</a>
+                        <a class="slt-item {{ $column->id == $cld->id ? 'active' : '' }}" href="/{{ $cld->path ? $cld->path : $cld->id }}"><i class="icon"></i> {{ $cld->title }}</a>
                         @endforeach
                     </div>
                     @endif

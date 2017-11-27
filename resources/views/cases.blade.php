@@ -24,11 +24,11 @@
         <div class="slt-list">
             @foreach($parent->childColumns()->orderBy('sort','asc')->get() as $col)
                 <div class="slt-item {{ $col->id == $column->id ? 'active' : '' }} {{ ($column->parentId && $column->parentId->id == $col->id) ? 'active' : '' }}">
-                    <a class="slt-text " href="{{ $col->path ? $col->path : $col->id }}"><i class="icon"></i> {{ $col->title }}</a>
+                    <a class="slt-text " href="/{{ $col->path ? $col->path : $col->id }}"><i class="icon"></i> {{ $col->title }}</a>
                     @if($col->childColumns->count() > 0)
                     <div class="slt-list">
                         @foreach($col->childColumns()->orderBy('sort','asc')->get() as $cld)
-                        <a class="slt-item {{ $column->id == $cld->id ? 'active' : '' }}" href="{{ $cld->path ? $cld->path : $cld->id }}"><i class="icon"></i> {{ $cld->title }}</a>
+                        <a class="slt-item {{ $column->id == $cld->id ? 'active' : '' }}" href="/{{ $cld->path ? $cld->path : $cld->id }}"><i class="icon"></i> {{ $cld->title }}</a>
                         @endforeach
                     </div>
                     @endif

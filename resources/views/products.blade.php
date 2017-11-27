@@ -16,7 +16,6 @@
 <div class="page-aside z-aside-l">
     <div class="aside-hd">{{ $column->title }} </div>
     <div class="slt-wrap">
-        <div class="slt-hd">型号选择</div>
         <div class="slt-list">
             @foreach($contents as $con)
             <a class="slt-item" href="#{{ $con->id }}"><i class="icon"></i>  {{ $con->title }}</a>

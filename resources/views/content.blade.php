@@ -22,7 +22,6 @@
     <div class="aside-hd">{{ $column->title }} </div>
     @if(sizeOf($parent->childColumns) > 0)
     <div class="slt-wrap">
-        <div class="slt-hd">案列选择</div>
         <div class="slt-list">
             @foreach($parent->childColumns()->orderBy('sort','asc')->get() as $col)
                 <div class="slt-item {{ $col->id == $column->id ? 'active' : '' }} {{ ($column->parentId && $column->parentId->id == $col->id) ? 'active' : '' }}">

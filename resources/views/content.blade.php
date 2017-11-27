@@ -19,7 +19,9 @@
     <div class="content">{!! $content->desc !!}</div>
 </div>
 <div class="page-aside z-aside-l">
-    <div class="aside-hd">{{ $column->title }} </div>
+    @if($parent->id != 4)
+        <div class="aside-hd">{{ $column->title }} </div>
+    @endif
     @if(sizeOf($parent->childColumns) > 0)
     <div class="slt-wrap">
         <div class="slt-list">

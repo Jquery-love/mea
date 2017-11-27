@@ -1603,7 +1603,7 @@ a:hover {
 
 .page-bd .page-recommend .recommend-hd {
   font-size: 1.6rem;
-  padding: 5px 20px;
+  padding: 5px 10px;
   background-color: #ffde10;
   font-weight: bold;
 }
@@ -1619,6 +1619,10 @@ a:hover {
   display: inline-block;
   position: relative;
   font-size: 1.4rem;
+}
+
+.page-bd .page-recommend .recommend-list .recommend-item .recommend-img {
+  width: 100%;
 }
 
 .page-bd .page-recommend .recommend-list .recommend-item:first-child {
@@ -1642,6 +1646,10 @@ a:hover {
 
 .page-bd .page-recommend .recommend-list .recommend-item:hover .recommend-info {
   background-color: #eee;
+}
+
+.page-bd .page-recommend .recommend-list .recommend-item:hover .recommend-title {
+  color: #333;
 }
 
 .page-bd .page-attention {
@@ -1884,6 +1892,12 @@ a:hover {
     float: none;
     left: auto;
     margin-left: 0;
+  }
+
+  .page-bd .page-recommend .recommend-list .recommend-item {
+    margin-left: 0;
+    width: 100%;
+    display: block;
   }
 
   .page-bd .page-main {

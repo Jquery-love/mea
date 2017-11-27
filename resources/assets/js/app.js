@@ -116,10 +116,10 @@ window.miya = {
                 $main = $('.page-main'),
                 $aside = $('.page-aside');
             console.log(winData);
-            if(winData.innerWidth < 640 && $main.next(".page-aside").length){
+            if(winData.innerWidth <= 640 && $main.next(".page-aside").length){
                 // miya.fn.exchange($main,$aside);
                 $main.insertAfter($aside);
-            }else if($aside.next(".page-main").length){
+            }else if($aside.next(".page-main").length && winData.innerWidth > 640){
                 $main.insertBefore($aside);
             }
             if(typeof cb == 'function') cb(winData);

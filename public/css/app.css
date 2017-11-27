@@ -1610,6 +1610,7 @@ a:hover {
 
 .page-bd .page-recommend .recommend-list {
   margin-top: 20px;
+  font-size: 0;
 }
 
 .page-bd .page-recommend .recommend-list .recommend-item {
@@ -1617,6 +1618,7 @@ a:hover {
   width: 32%;
   display: inline-block;
   position: relative;
+  font-size: 1.4rem;
 }
 
 .page-bd .page-recommend .recommend-list .recommend-item:first-child {

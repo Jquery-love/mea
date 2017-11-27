@@ -14,7 +14,7 @@ class ColumnsController extends Controller
         //var_dump($query);
         $cols = new Column;
         $colhd = $cols->where('parent_id',0)->orderBy('sort','asc')->find([1, 2, 3,4,5,6]);
-        $colft = $cols->where('parent_id',0)->orderBy('sort','asc')->find([6,7,8,9]);
+        $colft = $cols->where('parent_id',0)->orderBy('sort','asc')->find([6,33,5,9]);
         //判断是否纯数字: 是 则是id
         if(stripos($query,'.')>0){
             $query = substr($query,0,stripos($query,'.'));

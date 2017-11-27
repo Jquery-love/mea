@@ -6,7 +6,7 @@
 	    allowedFileExtensions : ['jpg', 'png','gif','pdf'],
 	    overwriteInitial: false,
         initialPreview : [$('input[type="file"][id="{{ $id }}"]').attr("value") && "<img src='" + $('input[type="file"][id="{{ $id }}"]').attr("value") + "' class='file-preview-image'/>"],
-	    maxFileSize: 1000,
+	    maxFileSize: 10000,
 	    maxFilesNum: 10,
 	    uploadExtraData : {
 	    	'_token' : $("input[name='_token']").val(),

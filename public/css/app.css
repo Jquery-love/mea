@@ -923,6 +923,7 @@ a:hover {
 .page-header .my-top .logo strong {
   text-indent: 0;
   display: block;
+  line-height: 1;
   letter-spacing: 0.08rem;
   font-size: 1.6rem;
   margin-top: 10px;

@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@yield('title','米亚')</title>
+        <title>@yield('title','米亚') | 线性排水系统领导者</title>
+        <meta name="keywords" content="米亚排水，MEA，米亚建筑，建筑材料，线性排水，成品排水沟，树脂混凝土，高效排水系统">
+        <meta name="description" content="提供排水解决方案，树脂成品排水沟，德国品质，排水系统领导者，成品排水领导者，聚合物树脂混凝土排水产品">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('layer/css/layui.css') }}">
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>

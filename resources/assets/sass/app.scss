@@ -46,15 +46,16 @@
 		.menu-btn{display:none;}
         &.fixed{position:fixed;left:0;right:0;top:0;margin-top:0;}
         .menu-wrap{position:relative;}
-		.menu-item{line-height:50px;font-size:1.4rem;padding:0 1.2rem;font-weight:bold;display:inline-block;
-			.item-link{
+		.menu-item{line-height:50px;font-size:1.8rem;padding:0 1.2rem;font-weight:bold;display:inline-block;
+			.item-link{color:#777;
+				&:hover{color:$red;}
 				&.active{color:$red;}
 				.glyphicon{vertical-align:0px;font-size:1rem;@include scale(.8);}
 			}
             &:first-child{margin-left:-1.2rem;
             	.glyphicon{font-size:1.4rem;@include scale(1);}
             }
-			&:hover{color:$red;}
+			
             &.show{
                 .menu-child{display:flex;}
             }
@@ -62,8 +63,8 @@
 			.menu-child{position:absolute;top:50px;left:0;background-color:#fff;width:100%;padding:3%;justify-content:space-between;display:none;border-top-color:transparent;box-shadow:1px 1px 8px 0 rgba(0,0,0,0.2);
 				.menu-list,.menu-brand{display:inline-block;vertical-align:top;}
 				.menu-list{min-width:30%;border-right:1px solid $base-color;padding-right:3%;
-					.item-link{display:block;border-bottom:1px dashed $gray;
-						&.active{color:$red;}
+					.item-link{display:block;border-bottom:1px dashed $gray;font-size:1.6rem;
+						// &.active{color:$red;}
 
 					}
 				}

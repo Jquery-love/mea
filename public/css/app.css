@@ -1059,10 +1059,18 @@ a:hover {
 
 .page-header .my-menu .menu-item {
   line-height: 50px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   padding: 0 1.2rem;
   font-weight: bold;
   display: inline-block;
+}
+
+.page-header .my-menu .menu-item .item-link {
+  color: #777;
+}
+
+.page-header .my-menu .menu-item .item-link:hover {
+  color: #e30613;
 }
 
 .page-header .my-menu .menu-item .item-link.active {
@@ -1084,10 +1092,6 @@ a:hover {
   font-size: 1.4rem;
   -webkit-transform: scale(1);
   transform: scale(1);
-}
-
-.page-header .my-menu .menu-item:hover {
-  color: #e30613;
 }
 
 .page-header .my-menu .menu-item.show .menu-child {
@@ -1136,10 +1140,7 @@ a:hover {
 .page-header .my-menu .menu-item .menu-child .menu-list .item-link {
   display: block;
   border-bottom: 1px dashed #999;
-}
-
-.page-header .my-menu .menu-item .menu-child .menu-list .item-link.active {
-  color: #e30613;
+  font-size: 1.6rem;
 }
 
 .page-header .my-menu .menu-item .menu-child .menu-brand {

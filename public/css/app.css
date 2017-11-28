@@ -918,6 +918,7 @@ a:hover {
   background-size: 100% auto;
   text-indent: -100px;
   max-width: 135px;
+  color: #000;
 }
 
 .page-header .my-top .logo strong {

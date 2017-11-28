@@ -12,7 +12,7 @@
 // Bootstrap
 .page-header{position:relative;z-index:10;
 	.my-top{display:flex;justify-content:space-between;
-		.logo{padding-top:62px;display:inline-block;font-size:0;background:url('../img/mea-logo.svg') no-repeat center top;background-size:100% auto;text-indent:-100px;max-width:135px;
+		.logo{padding-top:62px;display:inline-block;font-size:0;background:url('../img/mea-logo.svg') no-repeat center top;background-size:100% auto;text-indent:-100px;max-width:135px;color:#000;
 			strong{text-indent:0;display:block;line-height:1;letter-spacing:0.08rem;font-size:1.6rem;margin-top:8px;font-family:"Conduit ITC Pro Bold";font-weight:bold;text-transform:uppercase;white-space:nowrap;}
 		}
 	}

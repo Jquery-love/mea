@@ -20,7 +20,7 @@
                         <input type="submit" value="搜索"/>
                     </form>
                     <div class="web-sw-list ib">
-                        <a class="ch active" href="http://www.meachina.com/">简体中文</a>
+                        <a class="ch active" href="#">简体中文</a>
                         <a class="en" href="https://www.mea-group.com/en/">英语</a>
                         <a class="de" href="https://www.mea-group.com/de/">德语</a>
                     </div>

@@ -1,21 +1,10 @@
 @charset "UTF-8";
 
 @font-face {
-  font-weight: normal;
+  font-family: 'Conduit';
+  src: url(/fonts/ConduitITCPro-Light.eot?c59b4f85ea5b3eeca8063ccba54016c4) format("embedded-opentype"), url(/fonts/ConduitITCPro-Light.ttf?f45c2e7b02b34c5217732ce15f24c06b) format("truetype"), url(/fonts/ConduitITCPro-Light.woff?9d690faefe14b94437d1646f9c0df128) format("woff");
+  font-weight: light;
   font-style: normal;
-  font-family: "Gagamond";
-  src: url(/fonts/gagamond-bold.eot?ad8ca6d9e20fda94a37aebad0aeb7844);
-  /* IE9*/
-  src: url(/fonts/gagamond-bold.eot?ad8ca6d9e20fda94a37aebad0aeb7844) format("embedded-opentype"), url(/fonts/gagamond-bold.woff?6085fe7e2efa3b6be53296bfbc9dea71) format("woff"), url(/fonts/gagamond-bold.ttf?dc22282eae3677c2484d365976f46377) format("truetype");
-}
-
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: "Gagamond";
-  src: url(/fonts/gagamond-medium.eot?f19d0d74dd1b01274f70c86937106aaa);
-  /* IE9*/
-  src: url(/fonts/gagamond-medium.eot?f19d0d74dd1b01274f70c86937106aaa) format("embedded-opentype"), url(/fonts/gagamond-medium.woff?e4d34ad3e46ca9a79e6b771dec414bcd) format("woff"), url(/fonts/gagamond-medium.ttf?a0054eb500deb67804a4cb7c7fe1bc7f) format("truetype");
 }
 
 @font-face {
@@ -46,6 +35,13 @@
 
 .glyphicon.glyphicon-triangle-bottom:before {
   content: "\E252";
+}
+
+@font-face {
+  font-family: 'Conduit ITC Pro Bold';
+  src: url(/fonts/ConduitITCPro-Bold.eot?256a33dcda773efa66e5d4341b987d43) format("embedded-opentype"), url(/fonts/ConduitITCPro-Bold.ttf?be8ec3d55729e3cb6c2c76ecf59acc0c) format("truetype"), url(/fonts/ConduitITCPro-Bold.woff?12a3cbdd62253ece68f4c21476482a75) format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /**

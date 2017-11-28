@@ -929,7 +929,7 @@ a:hover {
   font-size: 1.6rem;
   margin-top: 8px;
   font-family: "Conduit ITC Pro Bold";
-  font-weight: bold;
+  font-weight: normal;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -1714,6 +1714,10 @@ a:hover {
 }
 
 @media screen and (max-width: 640px) {
+  html {
+    font-size: 8px;
+  }
+
   .wp {
     width: auto;
   }
@@ -1987,11 +1991,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 640px) {
-  html {
-    font-size: 8px;
-  }
-
+@media screen and (max-width: 320px) {
   .page-bd .page-main .news-list .news-item .news-img img {
     max-height: 200px;
   }

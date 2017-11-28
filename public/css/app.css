@@ -923,9 +923,10 @@ a:hover {
 .page-header .my-top .logo strong {
   text-indent: 0;
   display: block;
-  font-size: 1.8rem;
+  letter-spacing: 0.08rem;
+  font-size: 1.6rem;
   margin-top: 10px;
-  font-family: "Gagamond";
+  font-family: "Conduit ITC Pro Bold";
   font-weight: bold;
   text-transform: uppercase;
   white-space: nowrap;

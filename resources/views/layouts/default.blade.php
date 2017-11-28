@@ -9,15 +9,45 @@
         <link rel="stylesheet" href="{{ asset('layer/css/layui.css') }}">
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
         <script type="text/javascript" src="{{ asset('layer/layui.js') }}"></script>
-        <script type="text/javascript">
-            var _hmt = _hmt || [];
+        <script>
+            function gaTrackEvent(c,a){
+                try{
+                    _gat._getTracker("UA-36472620-1")._trackEvent(c,a);
+                }catch(e){}
+            }
+            function gaTrackLink(link,category,action,newwindow){
+                gaTrackEvent(category,action);
+                if(newwindow)
+                {
+                    setTimeout('window.open(\"' + link.href + '\");',100);
+                }
+                else{
+                    setTimeout('document.location=\"' + link.href + '\"',100);
+                }
+            }
+            var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-36472620-1']);_gaq.push(['_gat._anonymizeIp']);
+            setTimeout('_gaq.push([\'_trackEvent\',\'NoBounce\',\'Over 5 seconds\'])',5000);
+            _gaq.push(['_trackPageview']);
+            (function(){
+                var ga=document.createElement('script');
+                ga.type='text/javascript';
+                ga.async=true;
+                ga.src=('https:'==document.location.protocol ? 'https://ssl': 'http://www') + '.google-analytics.com/ga.js';
+                var s=document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga,s);
+            })();
         </script>
+
     </head>
     <body>
         <script type="text/javascript">
-        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cscript src='" + _bdhmProtocol + 
-"hm.baidu.com/h.js%3F01234567890ABCDEF01234567890ABCDEF' type='text/javascript'%3E%3C/script%3E"));
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?5504151443a9b7e130126c73aa5e56c0";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
         </script>
         <header class="page-header">
             <div class="my-top wp">

@@ -9,8 +9,16 @@
         <link rel="stylesheet" href="{{ asset('layer/css/layui.css') }}">
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
         <script type="text/javascript" src="{{ asset('layer/layui.js') }}"></script>
+        <script type="text/javascript">
+            var _hmt = _hmt || [];
+        </script>
     </head>
     <body>
+        <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + 
+"hm.baidu.com/h.js%3F01234567890ABCDEF01234567890ABCDEF' type='text/javascript'%3E%3C/script%3E"));
+        </script>
         <header class="page-header">
             <div class="my-top wp">
                 <a href="/" class="logo">MEA <strong>Building success</strong></a>
@@ -21,8 +29,8 @@
                     </form>
                     <div class="web-sw-list ib">
                         <a class="ch active" href="#">简体中文</a>
-                        <a class="en" href="https://www.mea-group.com/en/">英语</a>
-                        <a class="de" href="https://www.mea-group.com/de/">德语</a>
+                        <a class="en" href="https://www.mea-group.com/en/" target="_blank">英语</a>
+                        <a class="de" href="https://www.mea-group.com/de/" target="_blank">德语</a>
                     </div>
                 </div>
             </div>
@@ -141,7 +149,7 @@
                 @endforeach
             </div>
             <div class="ft-extra">
-                <p><a href="http://www.meachina.com">www.meachina.com</a><a href="http://www.mea-group.com">www.mea-group.com</a></p>
+                <p><a href="http://www.meachina.com" target="_blank">www.meachina.com</a><a href="http://www.mea-group.com" target="_blank">www.mea-group.com</a></p>
                 <p class="contact">
                     <span>米亚建筑材料 | 电话：86 512 5517 0567 </span>&nbsp;&nbsp;&nbsp; <span>传真：86 512 5511 3967 | 苏ICP备13019688号</span>
                 </p>

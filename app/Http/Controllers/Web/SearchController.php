@@ -22,9 +22,11 @@ class SearchController extends Controller
 
         if(!is_null($key)){
             $contents = $cons->where('title','like','%'.$key.'%')->get();
+            $key = '';
         }else{
             $contents = $cons->get();
         }
+
         //$column = $cols->where($colKey,$colId)->with('parentId')->first();
 
         //$parent = $column->parentTopId($column->id);

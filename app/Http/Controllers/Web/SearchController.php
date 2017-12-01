@@ -20,7 +20,12 @@ class SearchController extends Controller
 
         //$colKey = preg_match('/^\d+$/',$colId) ? 'id' : 'path';
 
-        $contents = $cons->where('title','like','%'.$key.'%')->get();
+        if(strlen($key) > 0){
+            $contents = $cons->where('title','like','%'.$key.'%')->get();
+        }else{
+            $contents = $cons->get();
+        }
+        
 
         //$column = $cols->where($colKey,$colId)->with('parentId')->first();
 

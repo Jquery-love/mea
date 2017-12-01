@@ -16,7 +16,7 @@ class SearchController extends Controller
         $key = $request->s;
         //dd($colId);
         $colhd = $cols->where('parent_id',0)->orderBy('sort','asc')->find([1, 2, 3,4,5,6]);
-        $colft = $cols->where('parent_id',0)->orderBy('sort','asc')->find([6,33,5,9]);
+        $colft = $cols->where('parent_id',0)->orderBy('sort','asc')->find([6,33,2,9]);
 
         //$colKey = preg_match('/^\d+$/',$colId) ? 'id' : 'path';
 

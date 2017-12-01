@@ -3,7 +3,7 @@
 @section('content')
 <div class="page-main page-search">
     <div class="search-hd">
-        @if(strlen($key)>0)
+        @if(strlen($key)<1)
             请输入要搜索内容
         @else
             您当前正在搜索：<span>{{ $key }}</span>

@@ -3,13 +3,13 @@
 @section('content')
 <div class="page-main page-search">
     <div class="search-hd">
-        @if(is_null($key))
+        @if(strlen($key)>0)
             请输入要搜索内容
         @else
             您当前正在搜索：<span>{{ $key }}</span>
         @endif
     </div>
-    <div class="search-bd">1
+    <div class="search-bd">
         @if(strlen($key) > 0)
         @foreach($contents as $con)
             

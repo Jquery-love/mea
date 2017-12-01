@@ -14,7 +14,6 @@ class SearchController extends Controller
         $cols = new Column;
         $cons = new Content;
         $key = $request->s;
-        var_dump(is_null($key));
         //dd($colId);
         $colhd = $cols->where('parent_id',0)->orderBy('sort','asc')->find([1, 2, 3,4,5,6]);
         $colft = $cols->where('parent_id',0)->orderBy('sort','asc')->find([6,33,2,9]);
@@ -26,8 +25,6 @@ class SearchController extends Controller
         }else{
             $contents = $cons->get();
         }
-        dd($contents);
-
         //$column = $cols->where($colKey,$colId)->with('parentId')->first();
 
         //$parent = $column->parentTopId($column->id);

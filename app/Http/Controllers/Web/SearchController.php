@@ -24,10 +24,10 @@ class SearchController extends Controller
             $contents = $cons->where('title','like','%'.$key.'%')->get();
 
         }else{
-            $contents = $cons->get();
+            $contents = $cons->where('1=1')->get();
             $key = '';
         }
-        var_dump($key);
+        dd($contents);
         //$column = $cols->where($colKey,$colId)->with('parentId')->first();
 
         //$parent = $column->parentTopId($column->id);

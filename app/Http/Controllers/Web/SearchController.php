@@ -27,7 +27,7 @@ class SearchController extends Controller
             $contents = $cons->where('title','<>','')->get();
             $key = '';
         }
-        dd($contents);
+        // dd($contents);
         //$column = $cols->where($colKey,$colId)->with('parentId')->first();
 
         //$parent = $column->parentTopId($column->id);

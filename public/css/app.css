@@ -1147,7 +1147,7 @@ a:hover {
 }
 
 .page-header .my-menu .menu-item .menu-child .menu-brand img {
-  max-height: 200px;
+  max-width: 100%;
 }
 
 .banner {

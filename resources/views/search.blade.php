@@ -6,7 +6,7 @@
         您当前正在搜索：<span>{{ $key }}</span>
     </div>
     <div class="search-bd">
-        @if(!empty($contents))
+        @if(!empty($contents) && !is_null($contents))
             @foreach($contents as $con)
                 <div class="search-item">
                     @if( $con->column->parent_id == 3 || ($con->column->parent_id == 0 && $con->column->id == 2 ))

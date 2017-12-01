@@ -27,7 +27,7 @@ class SearchController extends Controller
             $contents = $cons->get();
             $key = '';
         }
-
+        var_dump($key);
         //$column = $cols->where($colKey,$colId)->with('parentId')->first();
 
         //$parent = $column->parentTopId($column->id);

@@ -24,7 +24,7 @@ class SearchController extends Controller
             $contents = $cons->where('title','like','%'.$key.'%')->get();
 
         }else{
-            $contents = $cons->where('title','!=','')->get();
+            $contents = $cons->where('title','<>','')->get();
             $key = '';
         }
         dd($contents);

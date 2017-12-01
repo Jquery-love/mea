@@ -10,8 +10,9 @@
         @endif
     </div>
     <div class="search-bd">1
+        @if(strlen($key) > 0)
         @foreach($contents as $con)
-            @if(!is_null($con) && !empty($con))
+            
             <div class="search-item">
                 @if( $con->column->parent_id == 3 || ($con->column->parent_id == 0 && $con->column->id == 2 ))
                 <a class="search-link" attr="{{ $con->column->id }}" href="/{{ $con->column->path ? $con->column->path : $con->column->id }}#{{ $con->id }}">
@@ -23,8 +24,8 @@
                 </a>
                 @endif
             </div>
-            @endif
 		@endforeach
+        @endif
     </div>
 </div>
 @stop

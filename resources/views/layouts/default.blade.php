@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <title>@yield('title','米亚') | 线性排水系统领导者</title>
         <meta name="keywords" content="米亚排水，MEA，米亚建筑，建筑材料，线性排水，成品排水沟，树脂混凝土，高效排水系统">
         <meta name="description" content="提供排水解决方案，树脂成品排水沟，德国品质，排水系统领导者，成品排水领导者，聚合物树脂混凝土排水产品">
@@ -175,10 +175,11 @@
         <div class="page-bd wp cup">@yield('content')</div>
         @endif
         <footer class="page-ft">
-            <div class="ft-nav">
+            <div class="ft-nav wp">
                 @foreach($colft as $cft)
                 <a href="/{{ $cft->path ? $cft->path : $cft->id }}" class="nav-item ib">{{ $cft->title }}</a>
                 @endforeach
+                <span class="nav-item code"><img src="../img/code.jpeg" alt="">米亚公众号</span>
             </div>
             <div class="ft-extra">
                 <p><a href="http://www.meachina.com" target="_blank">www.meachina.com</a><a href="http://www.mea-group.com" target="_blank">www.mea-group.com</a></p>

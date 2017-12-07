@@ -1703,11 +1703,13 @@ a:hover {
   margin-top: 2%;
   height: 100%;
   display: inline-block;
+  margin-left: 0;
 }
 
 .page-ft .ft-nav .nav-item.code img {
   max-width: 100px;
   display: block;
+  margin: 0 auto;
 }
 
 .page-ft .ft-nav .nav-item.code:hover {

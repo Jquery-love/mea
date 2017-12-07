@@ -221,8 +221,8 @@
 		.nav-item{margin-left:8%;border-bottom:2px solid transparent;font-size:1.6rem;
 			&:first-child{margin-left:0;}
 			&:hover{color:$base-color;border-bottom:2px solid $red;}
-			&.code{position: absolute;right:0;top:0;font-size:1.2rem;margin-top:2%;height:100%;display:inline-block;
-				img{max-width:100px;display:block;}
+			&.code{position: absolute;right:0;top:0;font-size:1.2rem;margin-top:2%;height:100%;display:inline-block;margin-left:0;
+				img{max-width:100px;display:block;margin:0 auto;}
 				&:hover{border-bottom:0;}
 			}
 		}

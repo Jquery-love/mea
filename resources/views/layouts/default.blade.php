@@ -179,7 +179,7 @@
                 @foreach($colft as $cft)
                 <a href="/{{ $cft->path ? $cft->path : $cft->id }}" class="nav-item ib">{{ $cft->title }}</a>
                 @endforeach
-                <span class="nav-item code"><img src="../img/code.jpeg" alt="">米亚公众号</span>
+                <span class="nav-item code"><img src="../img/code.jpeg" alt="">扫码关注米亚公众号</span>
             </div>
             <div class="ft-extra">
                 <p><a href="http://www.meachina.com" target="_blank">www.meachina.com</a><a href="http://www.mea-group.com" target="_blank">www.mea-group.com</a></p>

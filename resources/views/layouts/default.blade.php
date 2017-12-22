@@ -63,6 +63,7 @@
                         <a class="ch active" href="#">简体中文</a>
                         <a class="en" href="https://www.mea-group.com/en/" target="_blank">英语</a>
                         <a class="de" href="https://www.mea-group.com/de/" target="_blank">德语</a>
+                        <a class="de" href="https://www.mea-group.com/fr/" target="_blank">法语</a>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@
 .wp{max-width:1100px;margin:0 auto;}
 // Bootstrap
 .page-header{position:relative;z-index:10;
-	.my-top{display:flex;justify-content:space-between;
+	.my-top{display:flex;justify-content:space-between;position: relative;z-index:1;
 		.logo{padding-top:62px;display:inline-block;font-size:0;background:url('../img/mea-logo.svg') no-repeat center top;background-size:100% auto;text-indent:-100px;max-width:135px;color:#000;
 			strong{text-indent:0;display:block;line-height:1;letter-spacing:0.08rem;font-size:1.6rem;margin-top:8px;font-family:"Conduit ITC Pro Bold";font-weight:normal;text-transform:uppercase;white-space:nowrap;}
 		}
@@ -30,12 +30,12 @@
 				&:focus{width:200px;}
 			}
 		}
-		.web-sw-list{position:absolute;top:0;right:0;width:100px;height:30px;padding-top:30px;overflow:hidden;
+		.web-sw-list{position:absolute;top:0;right:0;width:100px;height:30px;padding:30px 10px 0;overflow:hidden;background-color: #fff;
 			a{display:block;padding-right:30px;line-height:30px;
 				&.ch{background:url('../img/ch.png') no-repeat right center;background-size:30px 18px;}
 				&.en{background:url('../img/en.svg') no-repeat right center;background-size:30px 18px;}
 				&.de{background:url('../img/de.svg') no-repeat right center;background-size:30px 18px;}
-				&.active{position:absolute;top:0;left:0;right:0;}
+				&.active{position:absolute;top:0;left:10px;right:10px;}
 			}
 			&:hover{height:auto;
 

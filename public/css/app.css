@@ -909,7 +909,7 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 .page-header .my-top .logo {
@@ -940,6 +940,7 @@ a:hover {
   margin-top: 1%;
   padding-right: 100px;
   position: relative;
+  z-index: 2;
 }
 
 .page-header .top-tool .search {

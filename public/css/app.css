@@ -1700,9 +1700,9 @@ a:hover {
 }
 
 .page-ft .ft-nav .nav-item.code {
-  position: fixed;
-  right: 3%;
-  top: 160px;
+  position: absolute;
+  right: 0;
+  top: 0;
   font-size: 1.2rem;
   margin-top: 2%;
   display: inline-block;
